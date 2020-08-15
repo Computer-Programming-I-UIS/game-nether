@@ -13,7 +13,7 @@ void setup(){
   size(1080,500); 
    for(int i=0; i<=barras-1; i++){
       posarriba[i]=x;                                                        //asignar los datos al array
-      x+=esp;                           //rect(posxarriba, posyarriba, posicionxabajo, posecioydeabajo)
+      x+=esp;                          
     }
      x=2*esp/3;
      for(int i=0; i<=barras-1; i++){                                         //definir la posicion x del vertice inferior
@@ -66,7 +66,7 @@ void draw(){
     sum-=2;
     pery+=2;
    for(int i=0; i<barras-1; i++){
-    if(pery>=posy[i]){
+    if(pery+20>=posy[i]  && perx>posarriba[i] && perx<posarriba[i]+40 ){
       sum=0;
     }  
    }
@@ -75,15 +75,6 @@ void draw(){
     press=0;
   }
 
-   
- /*  else{
-     press=0;
-   }
-   
-  if(press==1){
-    sub=1;
-  }*/
-   
  
    
      
@@ -95,35 +86,7 @@ void draw(){
     }
  
   }
-  /*
-  for(int i=0; i<barras-1; i++){
-   if(perx>posarriba[i] && perx<posarriba[i]+40){
-    if(pery<posy[i]-90 || pery>posy[i]-20 ){
-    sum=0;
-  }
-  
-    if( press==1  && pery>posy[i]-90  ){
-    sum=1; 
-    
-   }
-   else{
-    press= 0;
-   }
-   
-   if(press==0 && pery<posy[i]-21){
-    sum=-1;  
-   }
-  
-  }
-  }*/
 
-/*  if(sum==1){
-    pery-=2; 
-  }
-  if(sum==-1){
-    pery+=2; 
-  }
- // for  */
  
  fill(0,0,255);
  if(keyPressed == true &&  key==CODED && keyCode == RIGHT){
