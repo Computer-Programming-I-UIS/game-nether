@@ -50,21 +50,26 @@ void draw(){
    rect(50,50,30, 30);
   }
   
-  if(sub==1 && sum<=60){
-   sum+=1;
-   pery-=1;
+  if(sub==1 && sum<=200){
+   sum+=2;
+   pery-=2;
    }
    else{
     sub=0;
     
    }
-   if(sum>=60 && sub==0){
+   if(sum>=200 && sub==0){
      press=1;
    }
    
   if(press!=0 && sum>0){
-    sum-=1;
-    pery+=1;
+    sum-=2;
+    pery+=2;
+   for(int i=0; i<barras-1; i++){
+    if(pery>=posy[i]){
+      sum=0;
+    }  
+   }
    }
   else{
     press=0;
@@ -85,8 +90,8 @@ void draw(){
   for(int i=0; i<barras-1; i++){
      fill(255);
     rect(posarriba[i], posy[i], 2*esp/3, 470-posy[i]);
-    if(pery-20<posy[i] && sum==0){
-    pery+=1; 
+    if(pery+20<posy[i] && sum==0 && perx>posarriba[i] && perx<posarriba[i]+40){
+    pery+=2; 
     }
  
   }
