@@ -1,6 +1,6 @@
 barras barra;
 int sum=0, barras=20;
-float x=0, esp=70,y;
+float x=0, esp=70, y, gar=0;
 float perx=5, pery, press=0,  sub;
 
 float posarriba []= new float[barras];                                      // array para la posicion x superior
@@ -44,13 +44,11 @@ void setup(){
 
 void draw(){
    background(0);
-  if(keyPressed == true &&  key==CODED && keyCode == UP && sum<=60 ){
-   sub=1;
-   fill(255);
-   rect(50,50,30, 30);
-  }
+ 
   
-  if(sub==1 && sum<=200){
+  
+    
+/*    if(sub==1 && ){
    sum+=2;
    pery-=2;
    }
@@ -58,7 +56,7 @@ void draw(){
     sub=0;
     
    }
-   if(sum>=200 && sub==0){
+   if(sum>=100 && sub==0){
      press=1;
    }
    
@@ -87,6 +85,13 @@ void draw(){
  
   }
 
+ */
+ 
+ for(int i=0; i<barras-1; i++){
+     fill(255);
+    rect(posarriba[i], posy[i], 2*esp/3, 470-posy[i]);
+ }
+ 
  
  fill(0,0,255);
  if(keyPressed == true &&  key==CODED && keyCode == RIGHT){
@@ -98,7 +103,30 @@ void draw(){
     
    }
   textSize(20);
-  text(sum,10,20);
-  rect(perx, pery, 20, 20); 
+  text(gar,10,20);
+  text(pery,10,40);
+for(int i=0; i<barras-1; i++){
+ if(keyPressed == true &&  key==CODED && keyCode == UP && sum<=100 && pery+20==posy[i]){
+   sub=1;
+   gar=4;
+   fill(255);
+   rect(50,50,30, 30);
+  }
+ 
+    rect(perx, pery, 20, 20); 
+    if(sub==1 && perx>posarriba[i] && perx<posarriba[i]+40 && pery+20<=posy[i]){
+    pery-=gar;
+    gar-=0.05;
+    
+    }
+    else if (perx>posarriba[i] && perx<posarriba[i]+40){
+     sub=0; 
+     gar=0;
+    } 
+    if(sub==1 && perx>posarriba[i] && perx<posarriba[i]+40 && pery+20>posy[i]) {
+     pery=posy[i]-20;
+    }
+    
+  }
   
 } //cerrar void
