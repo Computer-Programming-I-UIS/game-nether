@@ -1,7 +1,7 @@
 barras barra;
-int sum=0, barras=20;
-float x=0, esp=70, y, gar=0;
-float perx=5, pery, press=0,  sub;
+int sum=0, barras=10;
+float x=0, esp=120, y, gar=0;
+float perx=5, pery, press=0,  sub, poy;
 
 float posarriba []= new float[barras];                                      // array para la posicion x superior
 float posabajo []= new float[barras];                                       // array para la posicion x inferior
@@ -48,50 +48,21 @@ void draw(){
   
   
     
-/*    if(sub==1 && ){
-   sum+=2;
-   pery-=2;
-   }
-   else{
-    sub=0;
-    
-   }
-   if(sum>=100 && sub==0){
-     press=1;
-   }
-   
-  if(press!=0 && sum>0){
-    sum-=2;
-    pery+=2;
-   for(int i=0; i<barras-1; i++){
-    if(pery+20>=posy[i]  && perx>posarriba[i] && perx<posarriba[i]+40 ){
-      sum=0;
-    }  
-   }
-   }
-  else{
-    press=0;
-  }
 
- 
-   
-     
-  for(int i=0; i<barras-1; i++){
-     fill(255);
-    rect(posarriba[i], posy[i], 2*esp/3, 470-posy[i]);
-    if(pery+20<posy[i] && sum==0 && perx>posarriba[i] && perx<posarriba[i]+40){
-    pery+=2; 
-    }
- 
-  }
-
- */
  
  for(int i=0; i<barras-1; i++){
      fill(255);
-    rect(posarriba[i], posy[i], 2*esp/3, 470-posy[i]);
+    rect(posarriba[i], posy[i], 50, 470-posy[i]);
+    if(perx>posarriba[i] && perx<posarriba[i]+40){
+     poy=posy[i]; 
+    }
+   
  }
- 
+ for(int i=0; i<barras-2; i++){
+   if(perx<posarriba[i+1] && perx>posarriba[i]+40){
+     poy=0;
+   }
+ }
  
  fill(0,0,255);
  if(keyPressed == true &&  key==CODED && keyCode == RIGHT){
@@ -105,28 +76,31 @@ void draw(){
   textSize(20);
   text(gar,10,20);
   text(pery,10,40);
-for(int i=0; i<barras-1; i++){
- if(keyPressed == true &&  key==CODED && keyCode == UP && sum<=100 && pery+20==posy[i]){
+  text(poy,10,60);
+
+
+
+ if(keyPressed == true &&  key==CODED && keyCode == UP &&  pery+20==poy){
    sub=1;
    gar=4;
    fill(255);
    rect(50,50,30, 30);
-  }
- 
-    rect(perx, pery, 20, 20); 
-    if(sub==1 && perx>posarriba[i] && perx<posarriba[i]+40 && pery+20<=posy[i]){
-    pery-=gar;
-    gar-=0.05;
+   }
     
+     rect(perx, pery, 20, 20); 
+    if(sub==1  &&  pery+20<=poy ){
+    pery-=gar+0.1;
+    gar-=0.05;
     }
-    else if (perx>posarriba[i] && perx<posarriba[i]+40){
+     
+    /* else if (perx>posarriba[i] && perx<posarriba[i]+40){
      sub=0; 
      gar=0;
+    } */
+    if(pery+20>poy) {
+     pery=poy-20;
     } 
-    if(sub==1 && perx>posarriba[i] && perx<posarriba[i]+40 && pery+20>posy[i]) {
-     pery=posy[i]-20;
-    }
-    
-  }
+   
+ 
   
 } //cerrar void
