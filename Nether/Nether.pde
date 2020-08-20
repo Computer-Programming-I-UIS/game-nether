@@ -1,5 +1,5 @@
 
-int sum=0, barras=10, vid=1;
+int sum=0, barras=10, vid=5, ini;
 float x=0, esp=120, gar=0;
 float perx=5, pery, sub, poy;
 
@@ -46,22 +46,40 @@ void setup(){
 void draw(){
    background(0);
   if(vid>0){
- for(int i=0; i<barras-1; i++){
+   if(keyPressed==true){
+     ini=1;
+   }
+    if(ini==1){
+    //////___________barras__________________////////
+    for(int i=0; i<barras-1; i++){
      fill(255);
     rect(posarriba[i], posy[i], 50, 470-posy[i]);
     if(perx>posarriba[i] && perx<posarriba[i]+40){
      poy=posy[i]; 
     }
-   
+
  }
- mov();
- if(pery>=height-20){
-   vid--;
+//////___________mover personaje__________________////////
+ mov();                     
+ 
+ //////___________perder__________________////////
+   if(pery>=height-20){
+     vid--;
+     pery=posy[0];
+     perx=posarriba[0]+5;
+   }
+ 
  }
-  }
-  else{
+ else{
    textSize(50);
+   text("PRESIONE CUALQUIER COSA", 300, 200);
+ }
+}
+  else{
+   //////___________GAME OVER__________________////////
+    textSize(50);
    text("GAME OVER", 300, 200);
+   ini=0;
   }
   
 } //cerrar void
