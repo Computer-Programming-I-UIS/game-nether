@@ -44,12 +44,7 @@ void setup(){
 
 void draw(){
    background(0);
- 
   
-  
-    
-
- 
  for(int i=0; i<barras-1; i++){
      fill(255);
     rect(posarriba[i], posy[i], 50, 470-posy[i]);
@@ -60,7 +55,7 @@ void draw(){
  }
  for(int i=0; i<barras-2; i++){
    if(perx<posarriba[i+1] && perx>posarriba[i]+40){
-     poy=0;
+     poy=height;
    }
  }
  
