@@ -54,7 +54,7 @@ void draw(){
     for(int i=0; i<barras-1; i++){
      fill(255);
     rect(posarriba[i], posy[i], 50, 470-posy[i]);
-    if(perx>posarriba[i] && perx<posarriba[i]+40){
+    if(perx>posarriba[i]-15 && perx<posarriba[i]+35){
      poy=posy[i]; 
     }
 

@@ -1,6 +1,6 @@
 void mov(){
  for(int i=0; i<barras-2; i++){
-   if(perx<posarriba[i+1] && perx>posarriba[i]+40){
+   if(perx<posarriba[i+1]-16 && perx>posarriba[i]+36){
      poy=height;
    }
  }
@@ -32,7 +32,7 @@ void mov(){
      rect(perx, pery, 20, 20); 
     if(sub==1  &&  pery+20<=poy ){
     pery-=gar+0.1;
-    gar-=0.05;
+    gar-=0.1;
     }
     
     if(pery+20>poy) {
