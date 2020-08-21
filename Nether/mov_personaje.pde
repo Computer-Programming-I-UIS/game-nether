@@ -6,6 +6,7 @@ void mov(){
  }
  
  fill(0,0,255);
+ if(perx<=500){
  if(keyPressed == true &&  key==CODED && keyCode == RIGHT && pery+60<=poy2){
     perx+=2;
     
@@ -14,6 +15,7 @@ void mov(){
     perx-=2;
     
    }
+ }
   textSize(20);
   text(gar,10,20);
   text(pery,10,40);
