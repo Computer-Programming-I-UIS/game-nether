@@ -22,21 +22,28 @@ void mov(){
 
 
 
- if(keyPressed == true &&  key==CODED && keyCode == UP &&  pery+20==poy){
+ if(keyPressed == true &&  key==CODED && keyCode == UP && pery+60==poy){
    sub=1;
    gar=4;
    fill(255);
    rect(50,50,30, 30);
    }
     
-     rect(perx, pery, 20, 20); 
-    if(sub==1  &&  pery+20<=poy ){
+     rect(perx, pery, 40, 60); 
+   
+    if(sub==1  &&  pery+60<=poy){
     pery-=gar+0.1;
     gar-=0.1;
     }
-    
-    if(pery+20>poy) {
-     pery=poy-20;
+    else if(pery+60<poy){
+    pery-=gar+0.1;
+    gar-=0.1;
+      
+    }
+    if(pery+60>poy) {
+     pery=poy-60;              //uso altura 
+     sub=0;
+     gar=0;
     } 
    
   

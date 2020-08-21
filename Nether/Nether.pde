@@ -39,7 +39,7 @@ void setup(){
       }
     }  //else
      } //for
- pery= posy[0]-20;
+ pery= posy[0]-60;
 
 }  // cerra setup
 
@@ -51,6 +51,7 @@ void draw(){
    }
     if(ini==1){
     //////___________barras__________________////////
+  
     for(int i=0; i<barras-1; i++){
      fill(255);
     rect(posarriba[i], posy[i], 50, 470-posy[i]);
@@ -63,9 +64,9 @@ void draw(){
  mov();                     
  
  //////___________perder__________________////////
-   if(pery>=height-20){
+   if(pery>=height-60){                     // uso altura 
      vid--;
-     pery=posy[0];
+     pery=posy[0]-60;                     //uso altura
      perx=posarriba[0]+5;
    }
  
