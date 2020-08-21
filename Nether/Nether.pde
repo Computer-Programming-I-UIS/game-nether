@@ -1,7 +1,7 @@
 
 int sum=0, barras=10, vid=5, ini;
 float x=0, esp=120, gar=0;
-float perx=5, pery, sub, poy;
+float perx=5, pery, sub, poy, pox, poy2;
 
 float posarriba []= new float[barras];                                      // array para la posicion x superior
 float posabajo []= new float[barras];                                       // array para la posicion x inferior
@@ -55,11 +55,18 @@ void draw(){
     for(int i=0; i<barras-1; i++){
      fill(255);
     rect(posarriba[i], posy[i], 50, 470-posy[i]);
-    if(perx>posarriba[i]-15 && perx<posarriba[i]+35){
+    if(perx>posarriba[i]-30 && perx<posarriba[i]+37){
      poy=posy[i]; 
+     poy2=posy[i];
     }
-
+  
  }
+  for(int i=0; i<barras-1; i++){
+     if(perx>posarriba[i]-35 && perx<posarriba[i]+85){
+       poy2=posy[i];
+     }
+    }
+    
 //////___________mover personaje__________________////////
  mov();                     
  
