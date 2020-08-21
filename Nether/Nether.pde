@@ -1,7 +1,7 @@
 
 int sum=0, barras=10, vid=5, ini;
 float x=0, esp=120, gar=0;
-float perx=5, pery, sub, poy, pox, poy2;
+float perx=5, pery, sub, poy, pox, poy2, cor;
 
 float posarriba []= new float[barras];                                      // array para la posicion x superior
 float posabajo []= new float[barras];                                       // array para la posicion x inferior
@@ -99,8 +99,20 @@ void draw(){
     pery=posy[0]-60;                     //uso altura
      perx=posarriba[0]+5;
    }
+ //////////_________CORAZONES_____________///////
+ for(int i=0; i<vid; i++){
+   noStroke(); 
+   fill(255, 0, 0);
+   ellipse(1065+cor,20,10,10);
+   ellipse(1055+cor,20,10,10);
+  triangle(1049+cor,20, 1070+cor ,20 , 1060+cor ,32); 
+ cor-=30;
+ }
+ cor=0;
+ stroke(2);
  
  }
+ 
  else{
    textSize(50);
    text("PRESIONE CUALQUIER COSA", 300, 200);
