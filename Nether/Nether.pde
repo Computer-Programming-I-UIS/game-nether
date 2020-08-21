@@ -91,6 +91,13 @@ void draw(){
      vid--;
      pery=posy[0]-60;                     //uso altura
      perx=posarriba[0]+5;
+     x=0;
+     for(int i=0; i<=barras-1; i++){
+      posarriba[i]=x;                                                        //asignar los datos al array
+      x+=esp;                          
+    }
+    pery=posy[0]-60;                     //uso altura
+     perx=posarriba[0]+5;
    }
  
  }
