@@ -9,18 +9,20 @@ void mov(){
  if(perx<=500){
  if(keyPressed == true &&  key==CODED && keyCode == RIGHT && pery+60<=poy2){
     perx+=2;
+    bar+=0.1;
     
    }
    if(keyPressed == true &&  key==CODED && keyCode == LEFT && pery+60<=poy2 ){
     perx-=2;
+    bar-=0.1;
     
    }
  }
-  textSize(20);
+/*  textSize(20);
   text(gar,10,20);
   text(pery,10,40);
   text(poy2,10,60);
-  text(vid, 1000,20);
+  text(vid, 1000,20); */
 
 
 

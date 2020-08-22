@@ -1,6 +1,6 @@
 
 int sum=0, barras=10, vid=5, ini;
-float x=0, esp=120, gar=0;
+float x=0, esp=120, gar=0, bar=2;
 float perx=5, pery, sub, poy, pox, poy2, cor;
 
 float posarriba []= new float[barras];                                      // array para la posicion x superior
@@ -50,39 +50,11 @@ void draw(){
      ini=1;
    }
     if(ini==1){
-    //////___________barras__________________////////
-  
-    for(int i=0; i<barras-1; i++){
-     fill(255);
-    if(i==8)
-    fill(255,0,0);
-    rect(posarriba[i], posy[i], 50, 470-posy[i]);
-    if(perx>posarriba[i]-30 && perx<posarriba[i]+37){
-     poy=posy[i]; 
-     poy2=posy[i];
-    }
-  
- }
-  
-  for(int i=0; i<barras-1; i++){
-     if(perx>posarriba[i]-35 && perx<posarriba[i]+85){
-       poy2=posy[i];
-         
-      }
-   
-        if(perx>500 && keyPressed == true &&  key==CODED && keyCode == RIGHT && pery+60<=poy2){
-        posarriba[i]-=2;
-        if(posarriba[i]<-50 && i>0){
-          posarriba[i]= posarriba[i-1]+esp;
-       }
-        if(posarriba[0]<-50 && i==0){
-        
-          posarriba[0]= posarriba[barras-2]+esp;
-       }
-   }
- 
-    }
-    
+
+      barras();
+      fill(0, 255, 0);
+      rect(20, 20, bar, 20);
+      
 //////___________mover personaje__________________////////
  mov();                     
  
@@ -91,6 +63,7 @@ void draw(){
      vid--;
      pery=posy[0]-60;                     //uso altura
      perx=posarriba[0]+5;
+     bar=2;
      x=0;
      for(int i=0; i<=barras-1; i++){
       posarriba[i]=x;                                                        //asignar los datos al array
