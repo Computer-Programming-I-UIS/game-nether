@@ -25,7 +25,7 @@
       }
           
    
-        if(perx>500 && keyPressed == true &&  key==CODED && keyCode == RIGHT && pery+60<=poy2){
+        if(perx>500 && keyPressed == true &&  key==CODED && keyCode == RIGHT && pery+60<=poy2 && vuel<3){
         posarriba[i]-=2;
         if(posarriba[i]<-50 && i>0){
           posarriba[i]= posarriba[i-1]+esp;
@@ -34,6 +34,7 @@
         if(posarriba[0]<-50 && i==0){
           posarriba[0]= posarriba[barras-2]+esp;
           bar+=1.5;
+          vuel+=1;
        }
    }
   
