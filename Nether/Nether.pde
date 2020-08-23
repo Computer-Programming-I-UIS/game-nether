@@ -1,6 +1,6 @@
 
-int sum=0, barras=10, vid=5, ini, level=1;
-float x=0, esp=120, gar=0, bar=2;
+int sum=0, barras=10, vid=5, ini, level=2;
+float x=0, esp=120, gar=0, bar=2, posi;
 float perx=5, pery, sub, poy, pox, poy2, cor;
 
 float posarriba []= new float[barras];                                      // array para la posicion x superior

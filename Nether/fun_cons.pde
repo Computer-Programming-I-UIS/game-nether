@@ -25,7 +25,35 @@ void perder(){
   
 }
 void level2(){
+  for(int i=0; i<barras-1; i++){
+    if(perx>posarriba[i]-35 && perx<posarriba[i]+80){
+      if(i<barras-1 ){
+         if(posy[i+1]>100 && posi!=-1 ){//movimiento de boca
+             posi=1;
+             }
+         else if(posy[i+1]>400 && posi!=1 ){
+              posi=1;
+             }
+        else{
+              posi=-1;
+             }
+              
+               posy[i+1]-=1*posi;
+              
+      } 
+    }
+      
+     /* if(i<barras-1 && posi<100 && posi>=-100){
+       posi+=1;
+       posy[i+1]-=1;
+     }
+     if(i<barras-1 && posi>=100 && ){
+       posi-=1;
+       posy[i+1]+=1;
+     }*/
+      
+    } 
+    
+  }
   
   
-  
-}
