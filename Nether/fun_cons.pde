@@ -24,6 +24,7 @@ void cora(){
 void perder(){
    if(pery>=height-60){                     // uso altura 
      vid--;
+     vuel=0;
      pery=posy[0]-60;                     //uso altura
      perx=posarriba[0]+5;
      bar=2;

@@ -58,7 +58,7 @@ void draw(){
       rect(20, 20, bar, 20);
       mov(); 
 //////___________pasar nivel__________________//////// 
-     /* if(bar>=55 && ini==1){
+      if(vuel>=3 && perx>posarriba[0]){
        ini=0;
        level+=1;
        bon=1;
@@ -71,7 +71,7 @@ void draw(){
     }
     pery=posy[0]-60;                     //uso altura
      perx=posarriba[0]+5;
-   }  */
+   }  
       
  
  //////___________perder__________________////////
