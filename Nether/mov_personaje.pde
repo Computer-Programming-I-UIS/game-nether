@@ -7,16 +7,18 @@ void mov(){
  
  fill(0,0,255);
  if(perx<=500){
- if(keyPressed == true &&  key==CODED && keyCode == RIGHT && pery+60<=poy2){
+ if(keyPressed == true &&  key==CODED){
+   if(keyCode == RIGHT && pery+60<=poy2){
     perx+=2;
     bar+=0.1;
     
    }
-   if(keyPressed == true &&  key==CODED && keyCode == LEFT && pery+60<=poy2 ){
+   if( keyCode == LEFT && pery+60<=poy2 ){
     perx-=2;
     bar-=0.1;
     
    }
+ }
  }
 /*  textSize(20);
   text(gar,10,20);
