@@ -1,6 +1,6 @@
 
-int sum=1, barras=10, vid=5, ini, level=2;
-float x=0, esp=120, gar=0, bar=40, posi;
+int sum=0, barras=10, vid=5, ini, level=2;
+float x=0, esp=120, gar=0, bar=40, posi, bon=1, dist;     
 float perx=5, pery, sub, poy, pox, poy2, cor;
 
 float posarriba []= new float[barras];                                      // array para la posicion x superior
@@ -45,7 +45,7 @@ void setup(){
 
 void draw(){
    background(0);
-   println(level);
+  
    
   if(vid>0){
    if(keyPressed== true && (key=='r' ||key=='R')){
@@ -58,7 +58,7 @@ void draw(){
       rect(20, 20, bar, 20);
       mov(); 
 //////___________pasar nivel__________________//////// 
-      if(bar>=51 && ini==1){
+      if(bar>=55 && ini==1){
        ini=0;
        level+=1;
       }

@@ -8,23 +8,22 @@
     rect(posarriba[i], posy[i], 50, 470-posy[i]);
     if(perx>posarriba[i]-30 && perx<posarriba[i]+37){
      poy=posy[i]; 
-     poy2=posy[i];
+     
     }
   
  }
+ 
+ 
   //////___________mov barras__________________//////// 
   for(int i=0; i<barras-1; i++){
      if(perx>posarriba[i]-35 && perx<posarriba[i]+85){
        poy2=posy[i];
-        if(bar>=45 && i<barras-3){
-     noStroke(); 
-     fill(255, 0, 0);
-     ellipse(posarriba[i+1]+25,posy[i+1]-30,10,10);
-     ellipse(posarriba[i+1]+15,posy[i+1]-30,10,10);
-     triangle(posarriba[i+1]+9,posy[i+1]-30, posarriba[i+1]+30 ,posy[i+1]-30 , posarriba[i+1]+20, posy[i+1]-15); 
-     cor+=1;
-  } 
+        if(bar>=45 && bon==1 ){                        //calcular cuando va a terminar para darle vida exta 
+        sum=i;
+        bon=0;
+        }
       }
+          
    
         if(perx>500 && keyPressed == true &&  key==CODED && keyCode == RIGHT && pery+60<=poy2){
         posarriba[i]-=2;
