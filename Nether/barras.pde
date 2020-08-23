@@ -1,7 +1,0 @@
-class barras {
-
-  
-  
-  
-  
-}//cerrar clase
