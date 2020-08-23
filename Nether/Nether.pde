@@ -1,5 +1,5 @@
 
-int sum=0, barras=10, vid=5, ini, level=2;
+int sum=1, barras=10, vid=5, ini, level=2;
 float x=0, esp=120, gar=0, bar=40, posi;
 float perx=5, pery, sub, poy, pox, poy2, cor;
 
@@ -58,7 +58,7 @@ void draw(){
       rect(20, 20, bar, 20);
       mov(); 
 //////___________pasar nivel__________________//////// 
-      if(bar>=50 && ini==1){
+      if(bar>=51 && ini==1){
        ini=0;
        level+=1;
       }
