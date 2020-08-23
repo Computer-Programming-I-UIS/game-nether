@@ -1,5 +1,5 @@
 
-int sum=0, barras=10, vid=5, ini, level=2;
+int sum=0, barras=10, vid=5, ini, level=1;
 float x=0, esp=120, gar=0, bar=40, posi, bon=1, dist;     
 float perx=5, pery, sub, poy, pox, poy2, cor;
 
@@ -61,7 +61,18 @@ void draw(){
       if(bar>=55 && ini==1){
        ini=0;
        level+=1;
-      }
+       bon=1;
+       sum=1;
+       bar=40;
+       x=0;
+     for(int i=0; i<=barras-1; i++){
+      posarriba[i]=x;                                                        //asignar los datos al array
+      x+=esp;                          
+    }
+    pery=posy[0]-60;                     //uso altura
+     perx=posarriba[0]+5;
+   }
+      
  
  //////___________perder__________________////////
   perder();
