@@ -20,6 +20,8 @@ void mov(){
    }
  }
  }
+textSize(20);
+  text(level,10,60);
 /*  textSize(20);
   text(gar,10,20);
   text(pery,10,40);
