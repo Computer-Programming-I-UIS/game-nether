@@ -1,6 +1,6 @@
 void mov(){
- for(int i=0; i<barras-2; i++){
-   if(perx<posarriba[i+1]-31 && perx>posarriba[i]+38){
+ for(int i=0; i<barras-1; i++){
+   if(perx<posarriba[i]+89 && perx>posarriba[i]+38){
      poy=height;
    }
  }
