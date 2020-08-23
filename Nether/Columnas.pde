@@ -30,7 +30,14 @@
           bar+=1.5;
        }
    }
- 
+  if(bar>=40 && i<barras-3){
+   noStroke(); 
+   fill(255, 0, 0);
+   ellipse(posarriba[i+2]+25,posy[i+2]-30,10,10);
+   ellipse(posarriba[i+2]+15,posy[i+2]-30,10,10);
+   triangle(posarriba[i+2]+9,posy[i+2]-30, posarriba[i+2]+30 ,posy[i+2]-30 , posarriba[i+2]+20, posy[i+2]-15); 
+    
+  }
     }
    
   }

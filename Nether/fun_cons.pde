@@ -58,14 +58,6 @@ void level2(){
       
     }
       
-     /* if(i<barras-1 && posi<100 && posi>=-100){
-       posi+=1;
-       posy[i+1]-=1;
-     }
-     if(i<barras-1 && posi>=100 && ){
-       posi-=1;
-       posy[i+1]+=1;
-     }*/
       
     } 
     
