@@ -6,6 +6,7 @@
     if(i==8)
     fill(255,0,0);
     rect(posarriba[i], posy[i], 50, 40);
+    copy(sprite3,7,41,22,15,posarriba[i],posy[i],70,55);
     if(perx>posarriba[i]-30 && perx<posarriba[i]+37){
      poy=posy[i]; 
      

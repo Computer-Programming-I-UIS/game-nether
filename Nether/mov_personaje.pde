@@ -11,9 +11,9 @@ void mov(){
    if(keyCode == RIGHT && pery+60<=poy2){
     perx+=2;
     bar+=0.1;
-    
+ 
    }
-   if( keyCode == LEFT && pery+60<=poy2 ){
+   if( keyCode == LEFT && pery+60<=poy2 && perx>=0){
     perx-=2;
     bar-=0.1;
     
@@ -36,13 +36,20 @@ textSize(20);
    gar=4;
    fill(255);
    rect(50,50,30, 30);
+
    }
-     copy(sprite1,0,ny,64,ny+64,perx,pery,45,60);
+     copy(sprite1,0,ny,64,64,perx,pery,45,60);
      
+     
+    if(pery+60==poy){
+        ny=64;
+    }
    
     if(sub==1  &&  pery+60<=poy){
     pery-=gar+0.1;
     gar-=0.1;
+    ny=384; 
+     
     }
     else if(pery+60<poy){
     pery-=gar+0.1;

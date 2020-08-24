@@ -1,5 +1,5 @@
-PImage sprite1;
-int x=0, esp=120, sum=0, barras=10, vid=5, ini, level=1, vuel=0,poy, pox, poy2,perx=5, pery,ny=0;
+PImage sprite1,sprite2,sprite3;
+int x=0, esp=120, sum=0, barras=10, vid=5, ini, level=1, vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0;
 float  gar=0, bar=40, posi, bon=1, dist;     
 float sub, cor;
 
@@ -11,6 +11,8 @@ int posy []= new int[barras];                                           // array
 void setup(){
  // rectMode(CORNERS);
   sprite1=loadImage("jugador1 (1).png");
+  sprite2=loadImage("lava.png");
+  sprite3=loadImage("columna.png");
   size(1080,500); 
    for(int i=0; i<=barras-1; i++){
       posarriba[i]=x;                                                        //asignar los datos al array
@@ -24,16 +26,17 @@ void setup(){
      for(int i=0; i<=barras-1; i++){                                        // posicion en y de las barras
       
      if(i==0){
-      posy[i]=int(random(150,450));
+      posy[i]=int(random(150,400));
+      posy[i+8]=posy[i]+int(random(-40,40));
      }
     else{ 
-      if(posy[i-1]<=419 && posy[i-1]>=100){
+      if(posy[i-1]<=370 && posy[i-1]>=100){
     posy[i]=int(random(posy[i-1]-50,posy[i-1]+50));
     
   } //if rango
       
-      if(posy[i-1]>=419 && posy[i-1]<=470 ){
-         posy[i]=int(random(posy[i-1]-50, 465));
+      if(posy[i-1]>=370 && posy[i-1]<=420 ){
+         posy[i]=int(random(posy[i-1]-50, 420));
       }
      if(posy[i-1]<=100 ){
          posy[i]=int(random(100, 150));
@@ -46,6 +49,7 @@ void setup(){
 
 void draw(){
    background(0);
+   
   
    
   if(vid>0){
@@ -53,7 +57,7 @@ void draw(){
      ini=1;
    }
     if(ini==1){
-
+      copy(sprite2,0,13,32,32,0,440,1080,120);
       barras();
       fill(0, 255, 0);
       rect(20, 20, bar, 20);
