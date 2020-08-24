@@ -42,7 +42,7 @@ void level2(){
   for(int i=0; i<barras-1; i++){
     if(perx>posarriba[i]-35 && perx<posarriba[i]+80){
      if(i<barras-2 ){
-         if(posy[i+1]>100 && posi!=-1 ){//movimiento de boca
+         if(posy[i+1]>100 && posi!=-1 ){
              posi=1;
              }
          else if(posy[i+1]>400 && posi!=1 ){
@@ -56,7 +56,7 @@ void level2(){
               
       } 
       if(i==barras-2 ){
-         if(posy[0]>100 && posi!=-1 ){//movimiento de boca
+         if(posy[0]>100 && posi!=-1 ){
              posi=1;
              }
          else if(posy[0]>400 && posi!=1 ){

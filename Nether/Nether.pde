@@ -1,15 +1,16 @@
+PImage sprite1;
+int x=0, esp=120, sum=0, barras=10, vid=5, ini, level=1, vuel=0,poy, pox, poy2,perx=5, pery,ny=0;
+float  gar=0, bar=40, posi, bon=1, dist;     
+float sub, cor;
 
-int sum=0, barras=10, vid=5, ini, level=1, vuel=0;
-float x=0, esp=120, gar=0, bar=40, posi, bon=1, dist;     
-float perx=5, pery, sub, poy, pox, poy2, cor;
-
-float posarriba []= new float[barras];                                      // array para la posicion x superior
-float posabajo []= new float[barras];                                       // array para la posicion x inferior
-float posy []= new float[barras];                                           // array posicion en y
+int posarriba []= new int[barras];                                      // array para la posicion x superior
+int posabajo []= new int[barras];                                       // array para la posicion x inferior
+int posy []= new int[barras];                                           // array posicion en y
 
 
 void setup(){
  // rectMode(CORNERS);
+  sprite1=loadImage("jugador1 (1).png");
   size(1080,500); 
    for(int i=0; i<=barras-1; i++){
       posarriba[i]=x;                                                        //asignar los datos al array
@@ -23,19 +24,19 @@ void setup(){
      for(int i=0; i<=barras-1; i++){                                        // posicion en y de las barras
       
      if(i==0){
-      posy[i]=random(150,450);
+      posy[i]=int(random(150,450));
      }
     else{ 
       if(posy[i-1]<=419 && posy[i-1]>=100){
-    posy[i]=random(posy[i-1]-50,posy[i-1]+50);
+    posy[i]=int(random(posy[i-1]-50,posy[i-1]+50));
     
   } //if rango
       
       if(posy[i-1]>=419 && posy[i-1]<=470 ){
-         posy[i]=random(posy[i-1]-50, 465);
+         posy[i]=int(random(posy[i-1]-50, 465));
       }
      if(posy[i-1]<=100 ){
-         posy[i]=random(100, 150);
+         posy[i]=int(random(100, 150));
       }
     }  //else
      } //for
@@ -65,6 +66,7 @@ void draw(){
        sum=1;
        bar=40;
        x=0;
+       vuel=0;
      for(int i=0; i<=barras-1; i++){
       posarriba[i]=x;                                                        //asignar los datos al array
       x+=esp;                          
@@ -81,7 +83,7 @@ void draw(){
   cor=0;
   stroke(2);
   rect(70,20,20,20);
-  if(level==2){
+  if(level>=2){
    level2(); 
   }
  

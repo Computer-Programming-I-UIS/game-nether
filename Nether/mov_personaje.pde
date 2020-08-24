@@ -37,8 +37,8 @@ textSize(20);
    fill(255);
    rect(50,50,30, 30);
    }
-    
-     rect(perx, pery, 40, 60); 
+     copy(sprite1,0,ny,64,ny+64,perx,pery,45,60);
+     
    
     if(sub==1  &&  pery+60<=poy){
     pery-=gar+0.1;

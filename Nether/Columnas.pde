@@ -5,7 +5,7 @@
      fill(255);
     if(i==8)
     fill(255,0,0);
-    rect(posarriba[i], posy[i], 50, 470-posy[i]);
+    rect(posarriba[i], posy[i], 50, 40);
     if(perx>posarriba[i]-30 && perx<posarriba[i]+37){
      poy=posy[i]; 
      
