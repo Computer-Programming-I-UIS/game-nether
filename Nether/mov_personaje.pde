@@ -6,20 +6,21 @@ void mov(){
  }
  
  fill(0,0,255);
- if(perx<=500 || vuel>=3){
+ if(perx<=500 || vuel>=3 ){
  if(keyPressed == true &&  key==CODED){
    if(keyCode == RIGHT && pery+60<=poy2){
     perx+=2;
     bar+=0.1;
  
    }
-   if( keyCode == LEFT && pery+60<=poy2 && perx>=0){
+  /* if( keyCode == LEFT && pery+60<=poy2 && perx>=0){
     perx-=2;
     bar-=0.1;
     
-   }
+   } */
  }
  }
+
 
  if(keyPressed == true &&  key==CODED && keyCode == UP && pery+60==poy){
    sub=1;

@@ -52,7 +52,7 @@ void level2(){
               posi=-1;
              }
               
-               posy[i+1]-=1*posi;
+               posy[i+1]-=1*posi*level;
               
       } 
       if(i==barras-2 ){
@@ -66,7 +66,7 @@ void level2(){
               posi=-1;
              }
               
-               posy[0]-=1*posi;
+               posy[0]-=1*posi*level;
               
       } 
       
