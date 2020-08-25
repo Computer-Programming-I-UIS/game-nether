@@ -1,5 +1,5 @@
 PImage sprite1,sprite2,sprite3, edad;
-int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=1;
+int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=2;
 int vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0, tutorial;
 float  gar=0, bar=40, posi, bon=1, dist;     
 float sub, cor;
@@ -57,21 +57,33 @@ void draw(){
   
    textSize(20);
    text(2*posi*level, 20, 20);
-  
+   if(level>=8){
+   fill(255);
+    textSize(50);
+   text("FELICIDADES GANASTE", 50, 200); 
+    text("SALISTE DEL INFIERNO", 250, 250); 
+    if(keyPressed== true && key==' ' && tutorial!=1){
+     ini=1;
+     level=1;
+     vid=5;
+   }
+ 
+  }
    
-  if(vid>0){
+  if(vid>0 && level<=7){
    if(keyPressed== true && key==' ' && tutorial!=1){
      ini=1;
    }
-    if(keyPressed==true && key=='r'){
+    if(keyPressed==true && (key=='r' || key=='R')){
       ini=0;
       tutorial=0;
     }
-    if(keyPressed==true && key=='t'){
-      tutorial=1;
-      
+    if(keyPressed==true && (key=='t' ||key=='T' )){
+      tutorial=1;  
     }
+   
    if(tutorial==1 && ini!=1 ){ 
+    
      fill(150);
      stroke(0,0, 0);
      rect(100,100,40,40,10);
@@ -90,13 +102,14 @@ void draw(){
       text("INICIO", 198,185);
       text("SALTAR", 145,230);
       text("IR A LA DERECHA", 145,285);
+      text("CONTROLES", 350,80);
        fill(0);
        textSize(30);
        text("SPACE",105,185);
         copy(sprite1,0,0,64,64,100,400,45,60);
    } 
 
-    if(ini==1){
+    if(ini==1 && level<=7){
 
       barras();
   
@@ -126,14 +139,15 @@ void draw(){
   cora();
   cor=0;
   stroke(2);
-  if(level>=2){
+  if(level>=2 && level<=7){
    level2(); 
   }
     
       copy(sprite2,0,13,32,32,0,450,600,120);
       copy(sprite2,0,13,32,32,500,450,600,120);
- }
  
+ }
+  
  else{
     if(tutorial!=1){
     copy(edad,0,0,450,600,50,400,45,60);
@@ -152,10 +166,12 @@ void draw(){
 }
   else{
    //////___________GAME OVER__________________////////
-  fill(255);
+  if(level<=7){
+   fill(255);
     textSize(50);
    text("GAME OVER", 300, 200);
    ini=0;
   }
-  
+  }
+ 
 } //cerrar void
