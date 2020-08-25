@@ -1,5 +1,5 @@
 PImage sprite1,sprite2,sprite3;
-int x=0, esp=120, sum=0, barras=10, vid=5, ini, level=1, vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0;
+int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=1, vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0;
 float  gar=0, bar=40, posi, bon=1, dist;     
 float sub, cor;
 
@@ -59,11 +59,11 @@ void draw(){
     if(ini==1){
       copy(sprite2,0,13,32,32,0,440,1080,120);
       barras();
-      fill(0, 255, 0);
-      rect(20, 20, bar, 20);
+  
       mov(); 
 //////___________pasar nivel__________________//////// 
-      if(vuel>=3 && perx>posarriba[0]){
+      
+      if(vuel>=3 && perx>posarriba[0] && pery+60==poy){
        ini=0;
        level+=1;
        bon=1;
@@ -86,7 +86,6 @@ void draw(){
   cora();
   cor=0;
   stroke(2);
-  rect(70,20,20,20);
   if(level>=2){
    level2(); 
   }

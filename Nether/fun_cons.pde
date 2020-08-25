@@ -7,16 +7,16 @@ void cora(){
   triangle(1049+cor,20, 1070+cor ,20 , 1060+cor ,32); 
  cor-=30;
  }  
- if(sum!=0 && dist>=40 ){
+ if(vuel>=3 && dist>=40 && sum!=0){
       noStroke();
      fill(255, 0, 0);
-     ellipse(posarriba[sum+1]+25,posy[sum+1]-30,10,10);
-     ellipse(posarriba[sum+1]+15,posy[sum+1]-30,10,10);
-     triangle(posarriba[sum+1]+9,posy[sum+1]-30, posarriba[sum+1]+30 ,posy[sum+1]-30 , posarriba[sum+1]+20, posy[sum+1]-15); 
+     ellipse(posarriba[8]+25,posy[8]-30,10,10);
+     ellipse(posarriba[8]+15,posy[8]-30,10,10);
+     triangle(posarriba[8]+9,posy[8]-30, posarriba[8]+30 ,posy[8]-30 , posarriba[8]+20, posy[8]-15); 
  }
- dist=dist(perx,pery,posarriba[sum+1]+25, posy[sum+1]-30);
+ dist=dist(perx,pery,posarriba[8]+25, posy[8]-30);
  
- if(dist<=40 && sum!=0){
+ if(vuel>=3 && dist<=40 && sum!=0){
    vid+=1;
    sum=0;
  }

@@ -20,22 +20,12 @@ void mov(){
    }
  }
  }
-textSize(20);
-  text(level,10,60);
-  text(dist,10,80);
-/*  textSize(20);
-  text(gar,10,20);
-  text(pery,10,40);
-  text(poy2,10,60);
-  text(vid, 1000,20); */
-
-
 
  if(keyPressed == true &&  key==CODED && keyCode == UP && pery+60==poy){
    sub=1;
    gar=4;
    fill(255);
-   rect(50,50,30, 30);
+ 
 
    }
      copy(sprite1,0,ny,64,64,perx,pery,45,60);
