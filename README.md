@@ -18,7 +18,6 @@ mortales.
 
 ![logo](https://user-images.githubusercontent.com/68023577/91270996-1f29a400-e73f-11ea-967a-bfc3f8218343.png)
 
-Este juego es apto para cualquie persona mayor de 10 años.
 
 Para poder salir del infierno tendras que 
 seguir con atencion las siguientes instrucciones
@@ -58,8 +57,10 @@ Imagen de fondo
 
 
 
+### importante: 
 
-
+-Para este juego se debe de descargar la libreria minim.
+-Este juego es apto para cualquie persona mayor de 10 años.
 
 
 
