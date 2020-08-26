@@ -1,6 +1,6 @@
-PImage sprite1,sprite2,sprite3, edad;
-int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=2;
-int vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0, tutorial;
+PImage sprite1,sprite2,sprite3, edad,fondo,titulo;
+int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=1;
+int vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0, tutorial,tix=645,tiy=132;
 float  gar=0, bar=40, posi, bon=1, dist;     
 float sub, cor;
 
@@ -12,8 +12,10 @@ int posy []= new int[barras];                                           // array
 
 void setup(){
  // rectMode(CORNERS);
+ fondo=loadImage("c703f972-cd50-4809-8a7a-b5d875c82e15 (2).jpg");
   letra =loadFont("Monospaced.bold-48.vlw");
   textFont(letra);
+  titulo=loadImage("nether (2).png");
   sprite1=loadImage("jugador1 (1).png");
   sprite2=loadImage("lava.png");
   sprite3=loadImage("columna.png");
@@ -53,8 +55,9 @@ void setup(){
 }  // cerra setup
 
 void draw(){
-   background(0);
-  
+   
+   image(fondo,0,0);
+   copy(titulo,14,76,215,44,225,100,tix,tiy);
    textSize(20);
    text(2*posi*level, 20, 20);
    if(level>=8){
@@ -83,7 +86,8 @@ void draw(){
     }
    
    if(tutorial==1 && ini!=1 ){ 
-    
+    tix=0;
+    tiy=0;
      fill(150);
      stroke(0,0, 0);
      rect(100,100,40,40,10);
@@ -108,9 +112,14 @@ void draw(){
        text("SPACE",105,185);
         copy(sprite1,0,0,64,64,100,400,45,60);
    } 
+   else{
+   tix=645;
+   tiy=132;
+   }
 
     if(ini==1 && level<=7){
-
+    tix=0;
+    tiy=0;
       barras();
   
       mov(); 
