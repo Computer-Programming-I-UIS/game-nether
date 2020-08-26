@@ -57,9 +57,11 @@ void setup(){
 void draw(){
    
    image(fondo,0,0);
+   if(level==1){
    copy(titulo,14,76,215,44,225,100,tix,tiy);
    textSize(20);
-   text(2*posi*level, 20, 20);
+   }
+  // text(2*posi*level, 20, 20);
    if(level>=8){
    fill(255);
     textSize(50);
@@ -72,6 +74,13 @@ void draw(){
    }
  
   }
+  
+   if(level>=2){
+   tix=0;
+   tiy=0;
+   
+   }
+   
    
   if(vid>0 && level<=7){
    if(keyPressed== true && key==' ' && tutorial!=1){
@@ -162,16 +171,25 @@ void draw(){
     copy(edad,0,0,450,600,50,400,45,60);
     textSize(40);
     fill(255);
-    if(level==1)
-    text("PRESIONE SPACE PARA INICIAR", 200, 300);
-    if(level>=2){
+    
+    if(level==1){
+    text("PRESIONE ESPACIO PARA INICIAR", 200, 300);
+    textSize(30);
+    text("PRESIONE LA TECLA T PARA VER LOS CONTROLES",165,360);
+    }
+    if(level>=2 ){
     textSize(50);
-    text("FELICIDADES BIENVENIDO AL NIVEL: ", 50, 200);
-    text("PRESIONE SPACE", 300, 300);
+    text("FELICIDADES BIENVENIDO AL NIVEL: ",50,200);    
+    text("PRESIONE ESPACIO", 300, 300);
     text(level, 1010, 200);
-   }
+    textSize(30);
+    text("PRESIONE LA TECLA T PARA VER LOS CONTROLES",165,360);
+    
+    
+   
  }
  }
+}
 }
   else{
    //////___________GAME OVER__________________////////
@@ -182,5 +200,5 @@ void draw(){
    ini=0;
   }
   }
- 
+  
 } //cerrar void
