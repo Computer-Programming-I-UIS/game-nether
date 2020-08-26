@@ -60,6 +60,8 @@ Imagen de fondo
 ### importante: 
 
 -Para este juego se debe de descargar la libreria minim.
+
+
 -Este juego es apto para cualquie persona mayor de 10 años.
 
 
