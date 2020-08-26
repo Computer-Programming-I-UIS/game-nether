@@ -1,3 +1,18 @@
+/*
+Autores: 
+Alfonso Daniel Sanchez Lemus-2191708
+Nestor Ivan Matajira Ortiz-2190414
+
+Descripcion: este es un pequeño juego tipo parkour el cual no consta de poder retroceder por lo que dificulta un poco su jugabilidad, 
+este juego se basa en intentar escaparde los 7 circulos del infierno para que Dante (nuestro personaje) vuelva al mundo de los mortales.
+
+*/
+
+import ddf.minim.*;
+
+Minim minim;
+AudioPlayer player;
+
 PImage sprite1,sprite2,sprite3, edad,fondo,titulo;                                             
 int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=1, creditos;
 int vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0, tutorial,tix=645,tiy=132;            //declarar variables generales
@@ -12,6 +27,9 @@ int posy []= new int[barras];                                           // array
 
 void setup(){
  // rectMode(CORNERS);
+ size(1080,500);
+ minim=new Minim(this);
+ player= minim.loadFile("fondomusica.wav");
  fondo=loadImage("c703f972-cd50-4809-8a7a-b5d875c82e15 (2).jpg");     
   letra =loadFont("Monospaced.bold-48.vlw");                           
   titulo=loadImage("nether (2).png");                                        //cargar imagenes
@@ -20,7 +38,9 @@ void setup(){
   sprite3=loadImage("columna.png");
   edad=loadImage("ESRB-E10.png");
     textFont(letra);
-  size(1080,500); 
+   
+   
+   
    for(int i=0; i<=barras-1; i++){
       posarriba[i]=x;                                                        //asignar los datos al array
       x+=esp;                          
@@ -57,6 +77,18 @@ void setup(){
 void draw(){
    
    image(fondo,0,0);
+   
+   if (ini==0){
+   player.pause();
+   //player= minim.loadFile("fondomusica.wav");           //pausar musica
+   
+   }
+   else if(ini!=0){                                        //reproducir musica
+   player.play(); 
+     
+                     
+                       
+   }
    if(level==1 && creditos!=1){
    copy(titulo,14,76,215,44,225,100,tix,tiy);                             //titulo inicial del juego
    textSize(20);
@@ -91,7 +123,7 @@ void draw(){
       tutorial=0;
       creditos=0;
     }
-     if(keyPressed==true && (key=='c' || key=='C')){                     //PRESIONAR C PARA CREDITOS
+     if(keyPressed==true && (key=='c' || key=='C') && tutorial==0 ){                     //PRESIONAR C PARA CREDITOS
      creditos=1;
      }
        if(creditos==1 && ini==0 ){
@@ -111,7 +143,7 @@ void draw(){
      
       
     }
-    if(keyPressed==true && (key=='t' ||key=='T' )){
+    if(keyPressed==true && (key=='t' ||key=='T' )&& creditos==0){
       tutorial=1;  
     }
    
@@ -194,14 +226,14 @@ void draw(){
     fill(255);
     
     if(level==1){
-    text("PRESIONE ESPACIO PARA INICIAR", 200, 300);                        //MOSTRAR MENU 
+    text("PRESIONE ESPACIO PARA INICIAR", 200, 350);                        //MOSTRAR MENU 
     textSize(25);
-    text("PRESIONE LA TECLA T PARA VER LOS CONTROLES",200,395);
-    text("PRESIONE LA TECLA C PARA VER LOS CREDITOS",200,420);
+    text("PRESIONE LA TECLA T PARA VER LOS CONTROLES",235,395);
+    text("PRESIONE LA TECLA C PARA VER LOS CREDITOS",235,420);
     }
     if(level>=2 ){
     textSize(50);
-    text("FELICIDADES BIENVENIDO AL NIVEL: ",50,200);    
+    text("FELICIDADES BIENVENIDO AL CIRCULO: ",50,200);    
     text("PRESIONE ESPACIO", 300, 300);
     text(level, 1010, 200);
     textSize(25);
