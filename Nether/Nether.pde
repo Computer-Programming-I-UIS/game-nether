@@ -1,5 +1,5 @@
 PImage sprite1,sprite2,sprite3, edad,fondo,titulo;
-int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=1;
+int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=1, creditos;
 int vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0, tutorial,tix=645,tiy=132;
 float  gar=0, bar=40, posi, bon=1, dist;     
 float sub, cor;
@@ -57,7 +57,7 @@ void setup(){
 void draw(){
    
    image(fondo,0,0);
-   if(level==1){
+   if(level==1 && creditos!=1){
    copy(titulo,14,76,215,44,225,100,tix,tiy);
    textSize(20);
    }
@@ -83,12 +83,33 @@ void draw(){
    
    
   if(vid>0 && level<=7){
-   if(keyPressed== true && key==' ' && tutorial!=1){
+   if(keyPressed== true && key==' ' && tutorial!=1  && creditos!=1){
      ini=1;
    }
     if(keyPressed==true && (key=='r' || key=='R')){
       ini=0;
       tutorial=0;
+      creditos=0;
+    }
+     if(keyPressed==true && (key=='c' || key=='C')){
+     creditos=1;
+     }
+       if(creditos==1 && ini==0 ){
+     textSize(30);
+     text("CREDITOS", 300,100);
+     textSize(20);
+      text("https://www.youtube.com/watch?v=K2iC1aCPbKA", 150, 150);
+      text("Heart of Courage/Two Steps From Hell",150,170);
+      
+      text("MUSICA DE FONDO", 150, 205);
+      text("November_Seventeen",150,290);
+
+       text("IMAGEN DE FONDO", 150, 315);
+       
+      text("https://www.shutterstock.com/es/image-vector/", 150, 250);
+    text("seamless-background-landscape-infernal-hot-cave-1500940460", 150,270); 
+     
+      
     }
     if(keyPressed==true && (key=='t' ||key=='T' )){
       tutorial=1;  
@@ -127,8 +148,8 @@ void draw(){
    }
 
     if(ini==1 && level<=7){
-    tix=0;
-    tiy=0;
+     tix=0;
+      tiy=0;
       barras();
   
       mov(); 
@@ -167,26 +188,25 @@ void draw(){
  }
   
  else{
-    if(tutorial!=1){
+    if(tutorial!=1 && creditos!=1){
     copy(edad,0,0,450,600,50,400,45,60);
     textSize(40);
     fill(255);
     
     if(level==1){
     text("PRESIONE ESPACIO PARA INICIAR", 200, 300);
-    textSize(30);
-    text("PRESIONE LA TECLA T PARA VER LOS CONTROLES",165,360);
+    textSize(25);
+    text("PRESIONE LA TECLA T PARA VER LOS CONTROLES",200,395);
+    text("PRESIONE LA TECLA C PARA VER LOS CREDITOS",200,420);
     }
     if(level>=2 ){
     textSize(50);
     text("FELICIDADES BIENVENIDO AL NIVEL: ",50,200);    
     text("PRESIONE ESPACIO", 300, 300);
     text(level, 1010, 200);
-    textSize(30);
+    textSize(25);
     text("PRESIONE LA TECLA T PARA VER LOS CONTROLES",165,360);
-    
-    
-   
+    text("PRESIONE LA TECLA C PARA VER LOS CREDITOS",165,400);
  }
  }
 }
