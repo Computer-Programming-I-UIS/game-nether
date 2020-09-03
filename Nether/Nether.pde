@@ -15,7 +15,7 @@ import ddf.minim.*;
 SoundFile player;
 boolean spacecode,upcode,rightcode,rcode,tcode,ccode;
 PImage sprite1,sprite2,sprite3, edad,fondo,titulo;                                             
-int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=1, creditos;
+int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=2, creditos;
 int vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0, tutorial,tix=645,tiy=132;            //declarar variables generales
 float  gar=0, bar=40, posi, bon=1, dist;     
 float sub, cor;
@@ -201,6 +201,7 @@ void draw(){
        bar=40;
        x=0;
        vuel=0;
+     
      for(int i=0; i<=barras-1; i++){
       posarriba[i]=x;                                                        //asignar los datos al array
       x+=esp;                          
@@ -252,15 +253,15 @@ void draw(){
   else{
    //////___________GAME OVER__________________////////
   if(level<=7){
-   fill(255);
+    fill(255);
     textSize(60);                                                                                  //MOSTRAR PANTALLA DE FIN DEL JEUGO 
-   text("GAME OVER", 400, 300);
-   textSize(30);
-   text("PRESIONA R PARA REINICIAR", 340, 400);
-    if(rcode && tutorial!=1 && creditos!=1){                  // reiniciar el juego
-     ini=1;
-     level=1;
-     vid=5;
+    text("GAME OVER", 400, 300);
+    textSize(30);
+       text("PRESIONA R PARA REINICIAR", 340, 400);
+     if(rcode && tutorial!=1 && creditos!=1){                  // reiniciar el juego
+       ini=1;
+       level=1;
+       vid=5;
    }
    
   

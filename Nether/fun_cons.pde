@@ -31,10 +31,34 @@ void perder(){
      x=0;
      for(int i=0; i<=barras-1; i++){
       posarriba[i]=x;                                                        //asignar los datos al array
-      x+=esp;                          
+      x+=esp;  
+        
+    }
+    if(vid<=0){
+     for(int i=0; i<=barras-1; i++){          
+      if(i==0){
+      posy[i]=int(random(150,400));
+      posy[i+8]=posy[i]+int(random(-40,40));
+     }
+    else{ 
+      if(posy[i-1]<=370 && posy[i-1]>=100){
+    posy[i]=int(random(posy[i-1]-50,posy[i-1]+50));                     
+    
+  } //if rango
+      
+      if(posy[i-1]>=370 && posy[i-1]<=420 ){
+         posy[i]=int(random(posy[i-1]-50, 420));                          //condiciones para la altura
+      }
+     if(posy[i-1]<=100 ){
+         posy[i]=int(random(100, 150));
+      }
+    }  //else
+    }
     }
     pery=posy[0]-60;                     //uso alt
      perx=posarriba[0]+5;
+     
+     
    }
   
 }
