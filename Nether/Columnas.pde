@@ -23,7 +23,7 @@
       }
           
    
-        if(perx>500 && keyPressed == true &&  key==CODED && keyCode == RIGHT && pery+60<=poy2 && vuel<3){
+        if(perx>500 && rightcode && pery+60<=poy2 && vuel<3){
         posarriba[i]-=2;
         if(posarriba[i]<-50 && i>0){                                          //HACER QUE LAS COLUMNAS SE MUEVAN 
           posarriba[i]= posarriba[i-1]+esp;
