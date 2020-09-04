@@ -46,13 +46,21 @@ void mov(){
     else if(pery+60<poy){
     pery-=gar+0.1;
     gar-=0.1;
-      
+     ny=384;   
     }
     if(pery+60>poy) {
      pery=poy-60;             
      sub=0;
      gar=0;
+      ny=384; 
     } 
+    
+    if(pery>=380 && pery<=400 ){
+    pery+=1;  
+    gar=-0.5;
+    
+    }
+ 
+    println (pery);
    
-  
 }

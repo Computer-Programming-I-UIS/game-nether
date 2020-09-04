@@ -1,5 +1,3 @@
-import processing.sound.*;
-
 /*
 Autores: 
 Alfonso Daniel Sanchez Lemus-2191708
@@ -10,12 +8,11 @@ este juego se basa en intentar escaparde los 7 circulos del infierno para que Da
 
 */
 import processing.sound.*;
-import ddf.minim.*;
 
 SoundFile player;
 boolean spacecode,upcode,rightcode,rcode,tcode,ccode;
 PImage sprite1,sprite2,sprite3, edad,fondo,titulo;                                             
-int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=2, creditos;
+int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=2 , creditos;
 int vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0, tutorial,tix=645,tiy=132;            //declarar variables generales
 float  gar=0, bar=40, posi, bon=1, dist;     
 float sub, cor;
@@ -221,9 +218,9 @@ void draw(){
    level2(); 
   }
     
-      copy(sprite2,0,13,32,32,0,450,600,120);                                //MOSTRAR LA LAVA
-      copy(sprite2,0,13,32,32,500,450,600,120);
- 
+      copy(sprite2,0,13,32,32,0,430,600,120);                                //MOSTRAR LA LAVA
+      copy(sprite2,0,13,32,32,500,430,600,120);
+
  }
   
  else{

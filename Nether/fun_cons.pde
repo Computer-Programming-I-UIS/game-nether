@@ -29,9 +29,11 @@ void perder(){
      perx=posarriba[0]+5;
      bar=2;
      x=0;
+     gar=0;
      for(int i=0; i<=barras-1; i++){
       posarriba[i]=x;                                                        //asignar los datos al array
-      x+=esp;  
+      x+=esp;
+      
         
     }
     if(vid<=0){
