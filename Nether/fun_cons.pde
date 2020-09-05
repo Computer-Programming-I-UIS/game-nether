@@ -48,6 +48,9 @@ void perder(){
          }
        
         else{ 
+         if(posy[i-1]<=100 ){
+            posy[i]=int(random(100, 150));
+           }
           if(posy[i-1]<=370 && posy[i-1]>=100){
            posy[i]=int(random(posy[i-1]-50,posy[i-1]+50));                     
           } //if rango
@@ -56,9 +59,7 @@ void perder(){
              posy[i]=int(random(posy[i-1]-50, 420));                          //condiciones para la altura
            }
          
-         if(posy[i-1]<=100 ){
-            posy[i]=int(random(100, 150));
-           }
+         
          }  //else
        }
      }

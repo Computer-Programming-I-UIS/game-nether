@@ -1,7 +1,18 @@
  void barras(){
     
 //////___________barras__________________////////
+  obs=random(0,100);
+ if(obs==21 && yobs<=-20){
   
+   yobs=600;
+  }
+fill(225);
+   ellipse(xobs,yobs,20,20);
+   xobs= random(150,1000);  
+  if(yobs>-20){
+  yobs-=2;
+    
+  }
   for(int i=0; i<barras-1; i++){
    
     fill(255);
