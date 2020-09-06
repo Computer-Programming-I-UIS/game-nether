@@ -12,10 +12,10 @@ import processing.sound.*;
 SoundFile player;
 boolean spacecode,upcode,rightcode,rcode,tcode,ccode;
 PImage sprite1,sprite2,sprite3, edad,fondo,titulo;                                             
-int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=2, creditos;
+int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=2, creditos, rest;
 int vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0, tutorial,tix=645,tiy=132;            //declarar variables generales
-float  gar=0, bar=40, posi, bon=1, dist, sub, cor, obs, xobs, yobs=600;     
-
+float  gar=0, bar=40, posi, bon=1, dist;     
+float sub, cor;
 
 PFont letra;
 int posarriba []= new int[barras];                                      // array para la posicion x superior
@@ -128,7 +128,7 @@ void draw(){
        mov(); 
 /////___________pasar nivel__________________//////// 
       
-      if(vuel>=3 && perx>posarriba[0] && pery+60==poy){      // PASAR DE NIVEL
+      if(vuel>=28 && perx>posarriba[0] && pery+60==poy){      // PASAR DE NIVEL
          ini=0;
          level+=1;
          bon=1;

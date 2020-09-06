@@ -1,18 +1,7 @@
  void barras(){
     
 //////___________barras__________________////////
-  obs=random(0,100);
- if(obs==21 && yobs<=-20){
   
-   yobs=600;
-  }
-fill(225);
-   ellipse(xobs,yobs,20,20);
-   xobs= random(150,1000);  
-  if(yobs>-20){
-  yobs-=2;
-    
-  }
   for(int i=0; i<barras-1; i++){
    
     fill(255);
@@ -31,19 +20,21 @@ fill(225);
        poy2=posy[i]; 
       }
      
-    if(perx>500 && rightcode && pery+60<=poy2 && vuel<3){
+    if(perx>500 && rightcode && pery+60<=poy2 && vuel<28){
       posarriba[i]-=2;
-        
-        if(posarriba[i]<-50 && i>0){                                          //HACER QUE LAS COLUMNAS SE MUEVAN 
-           posarriba[i]= posarriba[i-1]+esp;
+        resta(i);
+        if(posarriba[i]<-50){                                          //HACER QUE LAS COLUMNAS SE MUEVAN 
+           posarriba[i]= posarriba[rest]+esp;
             bar+=1.5;
+            vuel+=1;
           }
-        
+        /*
         if(posarriba[0]<-50 && i==0){
           posarriba[0]= posarriba[barras-2]+esp;
           bar+=1.5;
           vuel+=1;
-        }
+        }*/
       }
     }
+    println(vuel);
   }

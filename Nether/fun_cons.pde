@@ -9,7 +9,7 @@ void cora(){
      cor-=30;
    }  
 
-  if(vuel>=3 && dist>=40 && sum!=0){
+  if(vuel>=28 && dist>=40 && sum!=0){
     noStroke();
     fill(255, 0, 0);
     ellipse(posarriba[8]+25,posy[8]-30,10,10);
@@ -19,7 +19,7 @@ void cora(){
  
   dist=dist(perx,pery,posarriba[8]+25, posy[8]-30);                                   //DISTANCIA ENTRE EL JUGADOR Y EL CORAZON
  
- if(vuel>=3 && dist<=40 && sum!=0){
+ if(vuel>=28 && dist<=40 && sum!=0){
    vid+=1;                                                                            //OBTENER EL CORAZON
    sum=0;
  }
@@ -42,16 +42,18 @@ void perder(){
        
         if(vid<=0){
          for(int i=0; i<=barras-1; i++){          
-            if(i==0){
-            posy[i]=int(random(150,400));
-            posy[i+8]=posy[i]+int(random(-40,40));
-         }
-       
-        else{ 
-         if(posy[i-1]<=100 ){
-            posy[i]=int(random(100, 150));
+           resta(i);
+           //if(i==0){
+            //posy[i]=int(random(150,400));
+           // posy[i+8]=posy[i]+int(random(-40,40));
+             do{
+            posy[i]=int(random(posy[rest]-50,posy[rest]+50));   
            }
-          if(posy[i-1]<=370 && posy[i-1]>=100){
+           while( posy[i]<100 || posy[i]>420);
+       //  }
+       
+       // else{ 
+         /* if(posy[i-1]<=370 && posy[i-1]>=100){
            posy[i]=int(random(posy[i-1]-50,posy[i-1]+50));                     
           } //if rango
           
@@ -59,8 +61,11 @@ void perder(){
              posy[i]=int(random(posy[i-1]-50, 420));                          //condiciones para la altura
            }
          
-         
-         }  //else
+         if(posy[i-1]<=100 ){
+            posy[i]=int(random(100, 150));
+           }*/
+          
+       //  }  //else
        }
      }
     
@@ -72,11 +77,18 @@ void level2(){
     
     for(int i=0; i<barras-1; i++){
       if(perx>posarriba[i]-35 && perx<posarriba[i]+80){                     //HACER QUE LA BARRAS SUBAN
-        if(i<barras-2 ){
-          if(posy[i+1]>100 && posi!=-1 ){
+        if(i+1>barras-2){
+          rest=0;
+        }
+        if(i+1<=barras-2){
+         rest=i+1; 
+        }
+        
+      //  if(i<barras-2 ){
+          if(posy[rest]>100 && posi!=-1 ){
              posi=1;
             }
-          else if(posy[i+1]>400 && posi!=1 ){
+          else if(posy[rest]>400 && posi!=1 ){
                 posi=1;
               }
               
@@ -84,8 +96,8 @@ void level2(){
              posi=-1;
             }
             
-            posy[i+1]-=1*posi*level;
-            } 
+            posy[rest]-=1*posi*level;
+          /*  } 
           
        if(i==barras-2 ){                                                      //HACER QUE LA ULTIMA BARRA SUBA Y BAJE 
           if(posy[0]>100 && posi!=-1 ){
@@ -98,7 +110,7 @@ void level2(){
             posi=-1;
           }
           posy[0]-=1*posi*level;
-      }
+      }*/
     }
   }
 }
@@ -192,4 +204,14 @@ void menu(){
     text("PRESIONE LA TECLA C PARA VER LOS CREDITOS",165,400); 
   }
  }
+}
+
+void resta(int i){
+       if(i-1<0){
+        rest=barras-2;
+        }
+        if(i-1>=0){
+        rest=i-1;
+        }
+  
 }

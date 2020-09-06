@@ -6,7 +6,7 @@ void mov(){
   }
  
  fill(0,0,255);
- if(perx<=500 || vuel>=3 ){
+ if(perx<=500 || vuel>=28 ){
    if(rightcode && pery+60<=poy2){                   //MOVER A LA DERECHA EL PERSONAJE
       perx+=2;
       bar+=0.1;
@@ -46,3 +46,8 @@ void mov(){
       gar=-0.5;
    }
 }
+/*
+cqmbios 
+1 do while
+2 funcion de i-1
+*/
