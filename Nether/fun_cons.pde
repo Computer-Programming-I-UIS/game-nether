@@ -159,7 +159,7 @@ void resta(int i){
 }
 void bolas(){
   for(int i=0; i<=4; i++){
-    bol=int(random(0,100));
+    bol=int(random(0,200));
     if(bolasy[i]<=0 && bol==16){
       bolasx[i]=int(random(perx-200, perx+200));
       bolasy[i]=600;

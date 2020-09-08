@@ -27,6 +27,9 @@ float no;
      
     if(perx>500 && rightcode && pery+60<=poy2 && vuel<28){
       posarriba[i]-=2;
+     if(i<=4){ 
+      bolasx[i]-=2;
+     }
         resta(i);
         if(posarriba[i]<-50){                                          //HACER QUE LAS COLUMNAS SE MUEVAN 
            posarriba[i]= posarriba[rest]+esp;
