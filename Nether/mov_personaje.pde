@@ -46,8 +46,3 @@ void mov(){
       gar=-0.5;
    }
 }
-/*
-cqmbios 
-1 do while
-2 funcion de i-1
-*/

@@ -14,12 +14,13 @@ boolean spacecode,upcode,rightcode,rcode,tcode,ccode;
 PImage sprite1,sprite2,sprite3, edad,fondo,titulo;                                             
 int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=2, creditos, rest;
 int vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0, tutorial,tix=645,tiy=132;            //declarar variables generales
-float  gar=0, bar=40, posi, bon=1, dist;     
+float  gar=0, bar=40, posi, bon=1, dist, bol;     
 float sub, cor;
 
 PFont letra;
 int posarriba []= new int[barras];                                      // array para la posicion x superior
-//int posabajo []= new int[barras];                                       // array para la posicion x inferior
+int bolasx []= new int[5];                                       // array para la posicion x inferior
+int bolasy []= new int[5]; 
 int posy []= new int[barras];                                           // array posicion en y
 
 
@@ -44,10 +45,7 @@ void setup(){
       x+=esp;                          
     }
      x=2*esp/3;
-   /*  for(int i=0; i<=barras-1; i++){                                         //definir la posicion x del vertice inferior
-      posabajo[i]=x;
-      x+=esp;
-    }*/
+
      for(int i=0; i<=barras-1; i++){                                        // posicion en y de las barras
       
      if(i==0){

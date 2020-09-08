@@ -32,16 +32,9 @@ float no;
            posarriba[i]= posarriba[rest]+esp;
             bar+=1.5;
             vuel+=1;
-          }
-        /*
-        if(posarriba[0]<-50 && i==0){
-          posarriba[0]= posarriba[barras-2]+esp;
-          bar+=1.5;
-          vuel+=1;
-        }*/
+        }
       }
     }
-    println(vuel);
   }
   
  void level2(){
@@ -69,5 +62,6 @@ float no;
           
       }
     }
+    bolas();
 }
 }

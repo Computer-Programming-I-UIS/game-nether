@@ -43,29 +43,11 @@ void perder(){
         if(vid<=0){
          for(int i=0; i<=barras-1; i++){          
            resta(i);
-           //if(i==0){
-            //posy[i]=int(random(150,400));
-           // posy[i+8]=posy[i]+int(random(-40,40));
              do{
-            posy[i]=int(random(posy[rest]-50,posy[rest]+50));   
+             posy[i]=int(random(posy[rest]-50,posy[rest]+50));   
            }
            while( posy[i]<100 || posy[i]>420);
-       //  }
-       
-       // else{ 
-         /* if(posy[i-1]<=370 && posy[i-1]>=100){
-           posy[i]=int(random(posy[i-1]-50,posy[i-1]+50));                     
-          } //if rango
-          
-          if(posy[i-1]>=370 && posy[i-1]<=420 ){
-             posy[i]=int(random(posy[i-1]-50, 420));                          //condiciones para la altura
-           }
-         
-         if(posy[i-1]<=100 ){
-            posy[i]=int(random(100, 150));
-           }*/
-          
-       //  }  //else
+      
        }
      }
     
@@ -173,5 +155,18 @@ void resta(int i){
         if(i-1>=0){
         rest=i-1;
         }
+  
+}
+void bolas(){
+  for(int i=0; i<=4; i++){
+    bol=int(random(0,100));
+    if(bolasy[i]<=0 && bol==16){
+      bolasx[i]=int(random(perx-200, perx+200));
+      bolasy[i]=600;
+    }
+    ellipse(bolasx[i], bolasy[i],20,20); 
+    bolasy[i]-=2;
+  }
+  println(bol);
   
 }
