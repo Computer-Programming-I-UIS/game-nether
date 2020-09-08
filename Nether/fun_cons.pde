@@ -88,13 +88,13 @@ void tutorial(){
      text("R",108,135);
      fill(255);
      text("REGRESAR", 145,135);
-     text("INICIO", 198,185);
+     text("INICIO", 208,185);
      text("SALTAR", 145,230);
      text("IR A LA DERECHA", 145,285);
      text("CONTROLES", 350,80);
      fill(0);
      textSize(30);
-     text("SPACE",105,185);
+     text("SPACE",102,181);
      copy(sprite1,0,0,64,64,100,400,45,60);
   }
 
@@ -130,15 +130,16 @@ void menu(){
     fill(255);
     
     if(level==1){
-    text("PRESIONE ESPACIO PARA INICIAR", 200, 350);                        //MOSTRAR MENU 
+    textSize(50);
+    text("PRESIONE ESPACIO PARA INICIAR", 90, 335);                        //MOSTRAR MENU 
     textSize(25);
-    text("PRESIONE LA TECLA T PARA VER LOS CONTROLES",235,395);
-    text("PRESIONE LA TECLA C PARA VER LOS CREDITOS",235,420);
+    text("PRESIONE LA TECLA T PARA VER LOS CONTROLES",210,395);
+    text("PRESIONE LA TECLA C PARA VER LOS CREDITOS",220,420);
     }
    
     if(level>=2 ){
-    textSize(50);
-    text("FELICIDADES BIENVENIDO AL CIRCULO: ",50,200);    
+    textSize(45);
+    text("FELICIDADES BIENVENIDO AL CIRCULO: ",40,203);    
     text("PRESIONE ESPACIO", 300, 300);
     text(level, 1010, 200);
     textSize(25);

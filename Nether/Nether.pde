@@ -12,7 +12,7 @@ columnas columna;
 SoundFile player;
 boolean spacecode,upcode,rightcode,rcode,tcode,ccode;
 PImage sprite1,sprite2,sprite3, edad,fondo,titulo;                                             
-int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=2, creditos, rest;
+int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=1, creditos, rest;
 int vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0, tutorial,tix=645,tiy=132;            //declarar variables generales
 float  gar=0, bar=40, posi, bon=1, dist, bol;     
 float sub, cor;
@@ -30,13 +30,13 @@ void setup(){
 
     player= new SoundFile(this, "fondomusica.wav");
     fondo=loadImage("c703f972-cd50-4809-8a7a-b5d875c82e15 (2).jpg");     
-    letra =loadFont("Monospaced.bold-48.vlw");                           
+    letra =createFont("Firestarter.ttf",1); 
+    textFont(letra);
     titulo=loadImage("nether (2).png");                                        //cargar imagenes
     sprite1=loadImage("jugador1 (1).png");
     sprite2=loadImage("lava.png");
     sprite3=loadImage("columna.png");
     edad=loadImage("ESRB-E10.png");
-    textFont(letra);
      columna=  new columnas(5);
    
    
