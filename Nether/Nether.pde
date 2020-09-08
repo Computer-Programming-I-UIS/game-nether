@@ -8,7 +8,7 @@ este juego se basa en intentar escaparde los 7 circulos del infierno para que Da
 
 */
 import processing.sound.*;
-
+columnas columna;
 SoundFile player;
 boolean spacecode,upcode,rightcode,rcode,tcode,ccode;
 PImage sprite1,sprite2,sprite3, edad,fondo,titulo;                                             
@@ -36,7 +36,7 @@ void setup(){
     sprite3=loadImage("columna.png");
     edad=loadImage("ESRB-E10.png");
     textFont(letra);
-     
+     columna=  new columnas(5);
    
    
    for(int i=0; i<=barras-1; i++){
@@ -124,7 +124,7 @@ void draw(){
     if(ini==1 && level<=7){                           //INICIAR EL FUNCIONAMIENTO DEL JUEGO
        tix=0;
        tiy=0;
-       barras();
+       columna.barras();
        mov(); 
 /////___________pasar nivel__________________//////// 
       
@@ -157,7 +157,7 @@ void draw(){
  
   /////////////________NIVELES MAYORES O IGUALES A 2_________/////////////
     if(level>=2 && level<=7){
-        level2(); 
+        columna.level2(); 
       }
  
  //////////////________LAVA_____________/////////////////////////////

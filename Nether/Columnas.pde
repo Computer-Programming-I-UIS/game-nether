@@ -1,3 +1,8 @@
+class columnas{
+float no;
+  columnas(float clas){
+   clas=no; 
+  }
  void barras(){
     
 //////___________barras__________________////////
@@ -38,3 +43,31 @@
     }
     println(vuel);
   }
+  
+ void level2(){
+    
+      for(int i=0; i<barras-1; i++){
+        if(perx>posarriba[i]-35 && perx<posarriba[i]+80){                     //HACER QUE LA BARRAS SUBAN
+          if(i+1>barras-2){
+            rest=0;
+          }
+          if(i+1<=barras-2){
+           rest=i+1; 
+          }
+          
+          if(posy[rest]>100 && posi!=-1 ){
+               posi=1;
+            }
+         else if(posy[rest]>400 && posi!=1 ){
+                  posi=1;
+           }
+                
+         else{
+               posi=-1;
+              }
+              posy[rest]-=1*posi*level;
+          
+      }
+    }
+}
+}

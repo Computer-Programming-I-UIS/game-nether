@@ -73,47 +73,7 @@ void perder(){
      perx=posarriba[0]+5; 
    }
  }
-void level2(){
-    
-    for(int i=0; i<barras-1; i++){
-      if(perx>posarriba[i]-35 && perx<posarriba[i]+80){                     //HACER QUE LA BARRAS SUBAN
-        if(i+1>barras-2){
-          rest=0;
-        }
-        if(i+1<=barras-2){
-         rest=i+1; 
-        }
-        
-      //  if(i<barras-2 ){
-          if(posy[rest]>100 && posi!=-1 ){
-             posi=1;
-            }
-          else if(posy[rest]>400 && posi!=1 ){
-                posi=1;
-              }
-              
-          else{
-             posi=-1;
-            }
-            
-            posy[rest]-=1*posi*level;
-          /*  } 
-          
-       if(i==barras-2 ){                                                      //HACER QUE LA ULTIMA BARRA SUBA Y BAJE 
-          if(posy[0]>100 && posi!=-1 ){
-             posi=1;
-            }
-          else if(posy[0]>400 && posi!=1 ){
-               posi=1;
-            }
-          else{ 
-            posi=-1;
-          }
-          posy[0]-=1*posi*level;
-      }*/
-    }
-  }
-}
+
  
 void creditos(){
   textSize(30);
