@@ -174,13 +174,18 @@ void bolas(){
     if(disbol<=30){
       perder=1;
     }
-    if(bolasy[i]<=0 && bol==16){
-      bolasx[i]=int(random(perx-200, perx+200));
+    if(bolasy[i]<=0 && bol==16 && perx>60){
+      bolasx[i]=int(random(perx-50, perx+200));
       bolasy[i]=600;
     }
+    if(bolasy[i]>-10 && perx>60){
     ellipse(bolasx[i], bolasy[i],20,20); 
     bolasy[i]-=2;
+    }
+    if(perx<60){
+     bolasy[i]=0; 
+    }
   }
-  println(bol);
+  println(bolasy[1]);
   
 }
