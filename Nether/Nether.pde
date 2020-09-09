@@ -123,6 +123,7 @@ void draw(){
        tiy=0;
        columna.barras();
        mov(); 
+       
 /////___________pasar nivel__________________//////// 
       
       if(vuel>=28 && perx>posarriba[0] && pery+60==poy){      // PASAR DE NIVEL
@@ -160,7 +161,9 @@ void draw(){
  //////////////________LAVA_____________/////////////////////////////
     copy(sprite2,0,13,32,32,0,430,600,120);                                //MOSTRAR LA LAVA
     copy(sprite2,0,13,32,32,500,430,600,120);
-
+        fill(255); 
+       textSize(12);
+       text("R para regresar/pausar", 5,490);
  }
   
  else{

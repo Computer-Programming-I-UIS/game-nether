@@ -71,6 +71,9 @@ void creditos(){
   text("IMAGEN DE FONDO", 150, 315);
   text("https://www.shutterstock.com/es/image-vector/", 150, 250);
   text("seamless-background-landscape-infernal-hot-cave-1500940460", 150,270);
+  fill(255); 
+  textSize(12);
+  text("R para regresar", 5,490);
   }
  
 void tutorial(){
@@ -107,7 +110,7 @@ void inicio(){
     tutorial=0;
     creditos=0;
   }
-  if(ccode && tutorial==0 ){                     //PRESIONAR C PARA CREDITOS
+  if(ccode && tutorial==0){                     //PRESIONAR C PARA CREDITOS
     creditos=1;
   }
   if(creditos==1 && ini==0 ){
