@@ -97,10 +97,16 @@ void draw(){
      textSize(50);
      text("FELICIDADES GANASTE", 50, 200);                                //pantalla de trinfu
      text("SALISTE DEL INFIERNO", 250, 250); 
-     if(spacecode && tutorial!=1 && creditos!=1){                  // reiniciar el juego
-     ini=1;
-     level=1;
-     vid=5;
+     textSize(30);
+     text("R PARA REINICIAR", 350, 400); 
+   
+     if(rcode){                      //PRESIONAR R PARA REGRESAR
+      ini=0;
+      tutorial=0;
+      creditos=0;
+      level=1;
+      vid=5;
+  
      }
    }
   
@@ -161,9 +167,11 @@ void draw(){
  //////////////________LAVA_____________/////////////////////////////
     copy(sprite2,0,13,32,32,0,430,600,120);                                //MOSTRAR LA LAVA
     copy(sprite2,0,13,32,32,500,430,600,120);
-        fill(255); 
+       fill(135);
+       rect(2,475,20,20,5);
+       fill(255);
        textSize(12);
-       text("R para regresar/pausar", 5,490);
+       text("R  para regresar/pausar", 5,490);
  }
   
  else{
