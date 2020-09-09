@@ -12,9 +12,9 @@ columnas columna;
 SoundFile player;
 boolean spacecode,upcode,rightcode,rcode,tcode,ccode;
 PImage sprite1,sprite2,sprite3, edad,fondo,titulo;                                             
-int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=1, creditos, rest;
+int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=2, creditos, rest, perder;
 int vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0, tutorial,tix=645,tiy=132;            //declarar variables generales
-float  gar=0, bar=40, posi, bon=1, dist, bol;     
+float  gar=0, bar=40, posi, bon=1, dist, bol, disbol;     
 float sub, cor;
 
 PFont letra;
@@ -44,8 +44,7 @@ void setup(){
       posarriba[i]=x;                                                        //asignar los datos al array
       x+=esp;                          
     }
-     x=2*esp/3;
-
+    
      for(int i=0; i<=barras-1; i++){                                        // posicion en y de las barras
       
      if(i==0){

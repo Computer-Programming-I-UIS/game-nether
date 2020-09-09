@@ -26,7 +26,7 @@ void cora(){
 }
 
 void perder(){
-       if(pery>=height-60){                     // CUADNO EL PERSONAJE LLEGE A LA LAVA, PIERDA 
+       if(pery>=height-60 || perder==1){                     // CUADNO EL PERSONAJE LLEGE A LA LAVA, PIERDA 
          vid--;
          vuel=0;
          pery=posy[0]-60;                    
@@ -34,10 +34,12 @@ void perder(){
          bar=2;
          x=0;
          gar=0;
+         perder=0;
         
          for(int i=0; i<=barras-1; i++){
           posarriba[i]=x;                                                        //asignar los datos al array
           x+=esp;
+          
         }
        
         if(vid<=0){
@@ -54,6 +56,7 @@ void perder(){
      pery=posy[0]-60;                     //uso alt
      perx=posarriba[0]+5; 
    }
+   println(disbol);
  }
 
  
@@ -161,6 +164,10 @@ void resta(int i){
 void bolas(){
   for(int i=0; i<=4; i++){
     bol=int(random(0,200));
+    disbol=dist(perx, pery, bolasx[i], bolasy[i]);
+    if(disbol<=30){
+      perder=1;
+    }
     if(bolasy[i]<=0 && bol==16){
       bolasx[i]=int(random(perx-200, perx+200));
       bolasy[i]=600;
