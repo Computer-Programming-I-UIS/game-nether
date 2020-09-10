@@ -170,8 +170,8 @@ void resta(int i){
 void bolas(){
   for(int i=0; i<=4; i++){
     bol=int(random(0,200));
-    disbol=dist(perx, pery, bolasx[i], bolasy[i]);
-    if(disbol<=30){
+    disbol=dist(perx+22, pery+30, bolasx[i], bolasy[i]);
+    if(disbol<=20){
       perder=1;
     }
     if(bolasy[i]<=0 && bol==16 && perx>60){
@@ -183,7 +183,7 @@ void bolas(){
     bolasy[i]-=2;
     }
     if(perx<60){
-     bolasy[i]=0; 
+     bolasy[i]=-20; 
     }
   }
   println(bolasy[1]);
