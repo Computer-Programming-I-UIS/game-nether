@@ -108,6 +108,9 @@ void tutorial(){
   }
 
 void inicio(){
+  if(spacecode && tutorial!=1  && creditos!=1){     //INICAR EL JUEGO
+     ini=1;
+    } 
   if(rcode){                      //PRESIONAR R PARA REGRESAR
     ini=0;
     tutorial=0;

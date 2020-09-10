@@ -118,9 +118,7 @@ void draw(){
  /////////____________INICIAR JUEGO___________//////////////////
 
   if(vid>0 && level<=7){
-   if(spacecode && tutorial!=1  && creditos!=1){     //INICAR EL JUEGO
-     ini=1;
-    }
+  
     
     inicio();
 
