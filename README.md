@@ -32,6 +32,7 @@ seguir con atencion las siguientes instrucciones
  - Tendras que superar 7 circulos para llegar al mundo mortal.
 
 ![menu](https://user-images.githubusercontent.com/68088413/92854326-8473cb00-f3b6-11ea-9b01-420d8ddff062.png)
+
 ![jugando](https://user-images.githubusercontent.com/68088413/92854451-aff6b580-f3b6-11ea-999d-215a72e8dcc0.png)
 
 Ten en cuenta los siguiente comandos
@@ -58,10 +59,11 @@ Imagen de fondo
 ### importante: 
 
 -Para este juego se debe de descargar la libreria minim.
-
-
 -Este juego es apto para cualquie persona mayor de 10 años.
-![ESRB-E10](https://user-images.githubusercontent.com/68088413/92854540-dcaacd00-f3b6-11ea-9104-e4484079415c.png)
+
+
+![clasificación de edad](https://user-images.githubusercontent.com/68088413/92855096-82f6d280-f3b7-11ea-8853-e26d3355e9cc.png)
+
 
 
 
