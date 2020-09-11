@@ -6,6 +6,9 @@ Nestor Ivan Matajira Ortiz-2190414
 Descripcion: este es un pequeño juego tipo parkour el cual no consta de poder retroceder por lo que dificulta un poco su jugabilidad, 
 este juego se basa en intentar escaparde los 7 circulos del infierno para que Dante (nuestro personaje) vuelva al mundo de los mortales.
 
+////______IMPORTANTE_________//////
+
+PARA EJECUTAR ESTE JUEGO NECESITA LA LIBRERIA processing.sound.
 */
 import processing.sound.*;
 columnas columna;

@@ -14,9 +14,7 @@ del infierno, siendo cada uno más mortal que
 el anterior, al superar esta larga travesia 
 ayudaras a que Dante regrese al mundo de los 
 mortales.
-
-
-![logo](https://user-images.githubusercontent.com/68023577/91270996-1f29a400-e73f-11ea-967a-bfc3f8218343.png)
+![WhatsApp Image 2020-09-10 at 8 39 29 PM](https://user-images.githubusercontent.com/68023577/92853188-2d212b00-f3b5-11ea-8e43-f425de83f26f.jpeg)
 
 
 Para poder salir del infierno tendras que 
@@ -33,8 +31,9 @@ seguir con atencion las siguientes instrucciones
  asi que no podras retroceder en las plataformas.
  - Tendras que superar 7 circulos para llegar al mundo mortal.
 
-![menu](https://user-images.githubusercontent.com/68023577/91271015-25b81b80-e73f-11ea-94a2-601e32a72b0c.png)
-![juego](https://user-images.githubusercontent.com/68023577/91270981-1a64f000-e73f-11ea-808b-6b02722367a7.png)
+![menu](https://user-images.githubusercontent.com/68088413/92854326-8473cb00-f3b6-11ea-9b01-420d8ddff062.png)
+
+![jugando](https://user-images.githubusercontent.com/68088413/92854451-aff6b580-f3b6-11ea-999d-215a72e8dcc0.png)
 
 Ten en cuenta los siguiente comandos
  - c para ver los creditos. 
@@ -43,26 +42,32 @@ Ten en cuenta los siguiente comandos
  - espacio para iniciar. 
  - flecha arriba para saltar.
  - flecha derecha para avanzar. 
-![controles](https://user-images.githubusercontent.com/68023577/91270963-146f0f00-e73f-11ea-89d3-eed7ad2c2f86.png)
 
-### creditos: 
+![tutorial](https://user-images.githubusercontent.com/68088413/92854489-c56bdf80-f3b6-11ea-8290-86dfc8c8c27a.png)
+
+### Creditos: 
+
+***Cancion usada de fondo***
+
 https://www.youtube.com/watch?v=K2iC1aCPbKA150
- Heart of Courage/Two Steps From Hell
-cancion usada de fondo
+Heart of Courage/Two Steps From Hell
+
+***Imagen de fondo***
 
 https://www.shutterstock.com/es/image-vector/"seamless-background-landscape-infernal-hot-cave-1500940460"
 November_Seventee
-Imagen de fondo 
+ 
+
 ![creditos](https://user-images.githubusercontent.com/68023577/91270949-0de09780-e73f-11ea-99fa-41042c8796b9.png)
 
 
 
-### importante: 
+### Importante: 
 
--Para este juego se debe de descargar la libreria minim.
+-Para este juego se debe de descargar la libreria ***processing.sound.***
+
+-Este juego es apto para cualquier persona mayor de ***10 años***.
 
 
--Este juego es apto para cualquie persona mayor de 10 años.
-
-
+![clasificación de edad](https://user-images.githubusercontent.com/68088413/92855096-82f6d280-f3b7-11ea-8853-e26d3355e9cc.png)
 
