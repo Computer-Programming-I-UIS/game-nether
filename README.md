@@ -14,6 +14,7 @@ del infierno, siendo cada uno más mortal que
 el anterior, al superar esta larga travesia 
 ayudaras a que Dante regrese al mundo de los 
 mortales.
+![WhatsApp Image 2020-09-10 at 8 39 29 PM](https://user-images.githubusercontent.com/68023577/92853188-2d212b00-f3b5-11ea-8e43-f425de83f26f.jpeg)
 
 
 ![logo](https://user-images.githubusercontent.com/68023577/91270996-1f29a400-e73f-11ea-967a-bfc3f8218343.png)
