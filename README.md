@@ -16,6 +16,12 @@ ayudaras a que Dante regrese al mundo de los
 mortales.
 ![WhatsApp Image 2020-09-10 at 8 39 29 PM](https://user-images.githubusercontent.com/68023577/92853188-2d212b00-f3b5-11ea-8e43-f425de83f26f.jpeg)
 
+### Trailer:
+
+![TRAILER NETHER](https://user-images.githubusercontent.com/68023577/92970553-79677c00-f444-11ea-86f9-3a2d6afa4369.gif)
+
+https://www.youtube.com/watch?v=uQBbx9Da0ec
+
 
 Para poder salir del infierno tendras que 
 seguir con atencion las siguientes instrucciones
