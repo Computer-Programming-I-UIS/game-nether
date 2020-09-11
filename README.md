@@ -64,9 +64,9 @@ November_Seventee
 
 ### importante: 
 
--Para este juego se debe de descargar la libreria minim.
+-Para este juego se debe de descargar la libreria ***processing.sound.***
 
--Este juego es apto para cualquie persona mayor de 10 años.
+-Este juego es apto para cualquier persona mayor de ***10 años***.
 
 
 ![clasificación de edad](https://user-images.githubusercontent.com/68088413/92855096-82f6d280-f3b7-11ea-8853-e26d3355e9cc.png)
