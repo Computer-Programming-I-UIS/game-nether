@@ -56,10 +56,24 @@ Heart of Courage/Two Steps From Hell
 
 https://www.shutterstock.com/es/image-vector/"seamless-background-landscape-infernal-hot-cave-1500940460"
 November_Seventee
+
+***Imagen del demonio***
+
+https://co.pinterest.com/pin/511228995198954717/
+
+***Colaboración de compañeros o conocidos:***
+
+-Rafael Santiago Suarez y Cesar Cañizares por ayuda en audios.
+
+-Santiago Gutierrez y Luis Fernando Romero en explicaciones y ayuda en la utilizacion de librerias y fuentes.
+
+-Juan Sebastian Guerrero (Konat) en la mejora de controles.
+
+-Jhoan Sebastian Ospina en la creacion del banner.
+
  
 
-![creditos](https://user-images.githubusercontent.com/68023577/91270949-0de09780-e73f-11ea-99fa-41042c8796b9.png)
-
+![Captura de pantalla 2020-09-11 012745](https://user-images.githubusercontent.com/68023577/92877227-8e0a2c80-f3d0-11ea-9db6-300ba2d8fd39.png)
 
 
 ### Importante: 
