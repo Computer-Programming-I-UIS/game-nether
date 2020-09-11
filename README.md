@@ -45,7 +45,7 @@ Ten en cuenta los siguiente comandos
 
 ![tutorial](https://user-images.githubusercontent.com/68088413/92854489-c56bdf80-f3b6-11ea-8290-86dfc8c8c27a.png)
 
-### creditos: 
+### Creditos: 
 
 ***Cancion usada de fondo***
 
@@ -62,7 +62,7 @@ November_Seventee
 
 
 
-### importante: 
+### Importante: 
 
 -Para este juego se debe de descargar la libreria ***processing.sound.***
 
@@ -70,7 +70,4 @@ November_Seventee
 
 
 ![clasificación de edad](https://user-images.githubusercontent.com/68088413/92855096-82f6d280-f3b7-11ea-8853-e26d3355e9cc.png)
-
-
-
 
