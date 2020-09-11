@@ -42,16 +42,22 @@ Ten en cuenta los siguiente comandos
  - espacio para iniciar. 
  - flecha arriba para saltar.
  - flecha derecha para avanzar. 
+
 ![tutorial](https://user-images.githubusercontent.com/68088413/92854489-c56bdf80-f3b6-11ea-8290-86dfc8c8c27a.png)
 
 ### creditos: 
+
+***Cancion usada de fondo***
+
 https://www.youtube.com/watch?v=K2iC1aCPbKA150
- Heart of Courage/Two Steps From Hell
-cancion usada de fondo
+Heart of Courage/Two Steps From Hell
+
+***Imagen de fondo***
 
 https://www.shutterstock.com/es/image-vector/"seamless-background-landscape-infernal-hot-cave-1500940460"
 November_Seventee
-Imagen de fondo 
+ 
+
 ![creditos](https://user-images.githubusercontent.com/68023577/91270949-0de09780-e73f-11ea-99fa-41042c8796b9.png)
 
 
@@ -59,6 +65,7 @@ Imagen de fondo
 ### importante: 
 
 -Para este juego se debe de descargar la libreria minim.
+
 -Este juego es apto para cualquie persona mayor de 10 años.
 
 
