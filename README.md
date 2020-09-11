@@ -22,6 +22,7 @@ mortales.
 
 https://www.youtube.com/watch?v=uQBbx9Da0ec
 
+### Caracteristicas:
 
 Para poder salir del infierno tendras que 
 seguir con atencion las siguientes instrucciones
