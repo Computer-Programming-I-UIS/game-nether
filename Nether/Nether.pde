@@ -10,9 +10,11 @@ este juego se basa en intentar escaparde los 7 circulos del infierno para que Da
 import processing.sound.*;
 columnas columna;
 SoundFile player;
-boolean spacecode,upcode,rightcode,rcode,tcode,ccode;
-PImage sprite1,sprite2,sprite3,sprite4, edad,fondo,titulo;                                             
-int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=1, creditos, rest, perder;
+SoundFile vozb;
+SoundFile sufrir;
+boolean spacecode,upcode,rightcode,rcode,tcode,ccode,entercode,historiam=false,audioboss=false;
+PImage sprite1,sprite2,sprite3,sprite4, edad,fondo,titulo,boss;                                             
+int x=0, esp=120, sum=1, barras=10, vid=5, ini, level=1, creditos, rest, perder,phx=450,phy=150,hi=0,mhy=0,colorh=0,colorh2=255;
 int vuel=0,poy, pox, poy2,perx=5, pery,ny=0, yc=0, tutorial,tix=645,tiy=132;            //declarar variables generales
 float  gar=0, bar=40, posi, bon=1, dist, bol, disbol;     
 float sub, cor;
@@ -27,7 +29,10 @@ int posy []= new int[barras];                                           // array
 void setup(){
  // rectMode(CORNERS);
  size(1080,500);
-
+ 
+     vozb= new SoundFile(this, "WhatsApp Audio 2020-09-10 at 3.21.18 PM (1).wav");
+    boss=loadImage("devil 2.jpg");
+    sufrir= new SoundFile(this, "whatsapp-audio-2020-09-04-at-55635-pm-1_tcuspV0l.wav");
     player= new SoundFile(this, "fondomusica.wav");
     fondo=loadImage("c703f972-cd50-4809-8a7a-b5d875c82e15 (2).jpg");     
     letra =createFont("Firestarter.ttf",1); 
@@ -38,7 +43,7 @@ void setup(){
     sprite3=loadImage("columna.png");
     sprite4=loadImage("bola de fuego.png");
     edad=loadImage("ESRB-E10.png");
-     columna=  new columnas(5);
+     columna=  new columnas(2);
    
    
    for(int i=0; i<=barras-1; i++){
@@ -76,11 +81,14 @@ void setup(){
 void draw(){
    player.amp(0.2);
    image(fondo,0,0);
+   if(ini==1 && hi<3){
    
+   historia();
+   }
    if (ini==0){
    player.pause();                      //pausar musica                                                    
    }
-   else if(ini!=0){                                        //reproducir musica
+   else if(ini!=0 && hi>=3){                                        //reproducir musica
      if(!player.isPlaying()){
        player.stop();
        player.play(); 
@@ -88,7 +96,7 @@ void draw(){
                      
    }
    
-   if(level==1 && creditos!=1){
+   if(level==1 && creditos!=1 && ini==0){
      copy(titulo,14,76,215,44,225,100,tix,tiy);                             //titulo inicial del juego
      textSize(20);
    }
@@ -123,7 +131,7 @@ void draw(){
     
     inicio();
 
-    if(ini==1 && level<=7){                           //INICIAR EL FUNCIONAMIENTO DEL JUEGO
+    if(ini==1 && level<=7 && hi>=3){                           //INICIAR EL FUNCIONAMIENTO DEL JUEGO
        tix=0;
        tiy=0;
        columna.barras();
@@ -254,6 +262,10 @@ void keycontrol(int k, boolean b){
        ccode=b;
      break;
      default:
+     break;
+     
+     case ENTER:
+     entercode=b;
      break;
   }
 }

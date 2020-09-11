@@ -62,15 +62,22 @@ void perder(){
  
 void creditos(){
   textSize(30);
-  text("CREDITOS", 300,100);                                          //HACER LOS CREDITOS
-  textSize(20);
-  text("https://www.youtube.com/watch?v=K2iC1aCPbKA", 150, 150);
-  text("Heart of Courage/Two Steps From Hell",150,170);
-  text("MUSICA DE FONDO", 150, 205);
-  text("November_Seventeen",150,290);
-  text("IMAGEN DE FONDO", 150, 315);
-  text("https://www.shutterstock.com/es/image-vector/", 150, 250);
-  text("seamless-background-landscape-infernal-hot-cave-1500940460", 150,270);
+  text("CREDITOS", 480,90);                                          //HACER LOS CREDITOS
+  textSize(15);
+  text("https://www.youtube.com/watch?v=K2iC1aCPbKA", 150, 120);
+  text("Heart of Courage/Two Steps From Hell",150,140);
+  text("MUSICA DE FONDO", 150, 165);
+  text("November_Seventeen",150,235);
+  text("IMAGEN DE FONDO", 150, 255);
+  text("https://www.shutterstock.com/es/image-vector/", 150, 195);
+  text("seamless-background-landscape-infernal-hot-cave-1500940460", 150,215);
+  text("IMAGEN DE DEMONIO/autor anonimo",150,305);
+  text("https://co.pinterest.com/pin/511228995198954717/",150,285);
+  text("Colaboracion para el juego por parte de:",150,335);
+  text("Rafael Santiago Suarez y Cesar Cañizares por ayuda en audios.",150,355);
+  text("Santiago Gutierrez y Luis Fernando Romero en explicaciones y ayuda en la utilizacion de librerias y fuentes",150,375);
+  text("Juan Sebastian Guerrero (Konat) en la mejora de controles",150,395);
+  text("Jhoan Sebastian Ospina en la creacion del banner",150,415);
   fill(135);
   rect(2,475,20,20,5);
   fill(255); 
@@ -141,7 +148,7 @@ void menu(){
     textSize(40);
     fill(255);
     
-    if(level==1){
+    if(level==1 && ini==0){
     textSize(50);
     text("PRESIONE ESPACIO PARA INICIAR", 90, 335);                        //MOSTRAR MENU 
     textSize(25);
@@ -192,4 +199,95 @@ void bolas(){
   }
 
   
+}
+
+void historia(){
+  if(entercode && historiam==false){
+    hi+=1;
+    historiam=true;
+  }
+
+if(hi==0){
+background(68,240,238);
+noStroke();
+fill(36,178,51);
+rect(0,300,width,200);
+fill(255);
+ellipse(100,100,100,60);
+ellipse(150,100,100,60);
+ellipse(200,100,100,60);
+ellipse(150,75,100,60);
+
+ellipse(700,100,100,60);
+ellipse(750,100,100,60);
+ellipse(800,100,100,60);
+ellipse(750,75,100,60);
+fill(255,255,255,colorh2);
+ellipse(800,180,300,60);
+triangle(650,180,690,200,540,195);
+fill(0,0,0,colorh2);
+textSize(20);
+text("Que maravilloso día",700,185);
+fill(0,0,0,colorh);
+rect(425,300,200,200);  
+fill(255);
+text("presiona enter para continuar",735,480);
+
+}  
+  if (hi==1){
+    colorh2=0;
+    colorh=255;
+    mhy=384;
+    phy+=5;
+    background(68,240,238);
+noStroke();
+fill(36,178,51);
+rect(0,300,width,200);
+fill(255);
+ellipse(100,100,100,60);
+ellipse(150,100,100,60);
+ellipse(200,100,100,60);
+ellipse(150,75,100,60);
+
+ellipse(700,100,100,60);
+ellipse(750,100,100,60);
+ellipse(800,100,100,60);
+ellipse(750,75,100,60);
+fill(255,255,255,colorh2);
+ellipse(800,180,300,60);
+triangle(650,180,690,200,540,195);
+fill(0,0,0,colorh2);
+textSize(20);
+text("Que maravilloso día",700,185);
+fill(0,0,0,colorh);
+rect(425,300,200,200);  
+ if(phy>=560){
+   historiam=false;
+   fill(255);
+text("presiona enter para continuar",735,480);
+ 
+ }
+  }
+  
+
+copy(sprite1,0,mhy,64,64,phx,phy,150,150);
+
+if(hi==2){
+  image(boss,0,0);
+  if(audioboss==false){
+  vozb.play();
+  audioboss=true;
+  }
+  
+  if(!vozb.isPlaying()){
+      vozb.stop();
+    historiam=false;
+     fill(255);
+     textSize(20);
+    text("presiona enter para continuar",710,480);
+  
+  }
+
+}
+
 }

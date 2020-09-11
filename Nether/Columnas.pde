@@ -1,7 +1,7 @@
 class columnas{
 float no;
   columnas(float clas){
-   clas=no; 
+   no=clas; 
   }
  void barras(){
     
@@ -26,9 +26,9 @@ float no;
       }
      
     if(perx>500 && rightcode && pery+60<=poy2 && vuel<28){
-      posarriba[i]-=2;
+      posarriba[i]-=no;
      if(i<=4){ 
-      bolasx[i]-=2;
+      bolasx[i]-=no;
      }
         resta(i);
         if(posarriba[i]<-50){                                          //HACER QUE LAS COLUMNAS SE MUEVAN 

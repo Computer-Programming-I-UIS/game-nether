@@ -42,7 +42,9 @@ void mov(){
      } 
     
   if(pery>=380 && pery<=400 ){
-      pery+=1;  
+    sufrir.play();  
+    pery+=1;  
       gar=-0.5;
+      
    }
 }
