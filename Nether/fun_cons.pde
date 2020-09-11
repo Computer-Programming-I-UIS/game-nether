@@ -56,7 +56,7 @@ void perder(){
      pery=posy[0]-60;                     //uso alt
      perx=posarriba[0]+5; 
    }
-   println(disbol);
+
  }
 
  
@@ -188,7 +188,8 @@ void bolas(){
     if(perx<60){
      bolasy[i]=-20; 
     }
+    copy(sprite4,18,16,40,42,bolasx[i]-10,bolasy[i]-10,40,40);
   }
-  println(bolasy[1]);
+
   
 }
